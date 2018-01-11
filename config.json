@@ -1,0 +1,21 @@
+{
+   "pipelines":[
+      {
+         "config":[
+            {
+               "git_url":"git@github.com:grapeup/gu_devops_fortress_config.git",
+               "tag":"master",
+               "file":"ci/pipelines/test_rc_pipeline.yml"
+            }
+         ],
+         "name":"rc-pipeline",
+         "file":"ci/pipelines/rc_pipeline.yml",
+         "vars":[
+
+         ]
+      }
+   ],
+   "executables":[
+
+   ]
+}
