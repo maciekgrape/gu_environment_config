@@ -30,11 +30,11 @@
         {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"}
         {"name": "concourse_utils_repo_private_key", "path": "/fortress/git_private_key"}
 
-        {"name": "terraform_state_bucket_name", "path": "/fortress/terraform_state_bucket_name"}
+        {"name": "terraform_state_bucket_name", "path": "/fortress/terraform_state_bucket_id"}
         {"name": "terraform_state_s3_access_key", "path": "/fortress/aws_access_key"}
         {"name": "terraform_state_s3_secret_key", "path": "/fortress/aws_secret_key"}
 
-        {"name": "bosh_state_bucket_name", "path": "/fortress/bosh_state_bucket_name"}
+        {"name": "bosh_state_bucket_name", "path": "/fortress/bosh_state_bucket_id"}
 
         {"name": "aws_access_key", "path": "/fortress/aws_access_key"}
         {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"}
