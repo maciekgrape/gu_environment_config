@@ -9,7 +9,24 @@
          "path":"/fortress/git_private_key"
       },
        {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
-       {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"}
+       {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
+       {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
+       {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"},
+       {"name": "az_1", "path": "/fortress/az_1"},
+       {"name": "az_2", "path": "/fortress/az_2"},
+       {"name": "bosh_public_key", "path": "/fortress/bosh_public_key"},
+       {"name": "bosh_private_key", "path": "/fortress/bosh_private_key"},
+       {"name": "concourse_certificate_arn", "path": "/fortress/concourse_certificate_arn"},
+       {"name": "cf_certificate_arn", "path": "/fortress/cf_certificate_arn"},
+       {"name": "fortress_aws_access_key", "path": "/fortress/aws_access_key"},
+       {"name": "fortress_aws_secret_key", "path": "/fortress/aws_secret_key"},
+       {"name": "fortress_aws_region", "path": "/fortress/aws_region"},
+       {"name": "fortress_aws_account_id", "path": "/fortress/aws_account_id"},
+       {"name": "fortress_cidr", "path": "/fortress/vpc_cidr"},
+       {"name": "fortress_vpc_id", "path": "/fortress/vpc_id"},
+       {"name": "jumpbox_ami", "path": "/fortress/jumpbox_ami"},
+       {"name": "tools_01_route_table_id", "path": "/fortress/tools_01_route_table_id"},
+       {"name": "tools_02_route_table_id", "path": "/fortress/tools_02_route_table_id"}
    ],
    "raw_vars":[
       {"name":"env_infrastructure_tag", "value": "master"},
