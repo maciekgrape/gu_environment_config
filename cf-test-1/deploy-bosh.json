@@ -5,7 +5,7 @@
   "file": "ci/pipelines/dev_pipeline.yml",
   "credhub_vars": [
     {
-      "name": "infrastructure_deployment_repo_private_key",
+      "name": "bosh_deployment_repo_private_key",
       "path": "/fortress/git_private_key"
     },
     {
