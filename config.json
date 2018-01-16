@@ -8,7 +8,20 @@
                "file":"ci/pipelines/test_rc_pipeline.yml"
             }
          ],
-         "name":"remove-config-test",
+         "name":"remote-config-test",
+         "vars":[
+
+         ]
+      },
+      {
+         "config":[
+            {
+               "git_url":"git@github.com:grapeup/gu_infrastructure_deployment.git",
+               "tag":"master",
+               "file":"ci/pipelines/dev_pipeline.yml"
+            }
+         ],
+         "name":"multi-remote-config-test",
          "vars":[
 
          ]
