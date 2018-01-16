@@ -30,7 +30,11 @@
       
        {"name": "aws_region", "path": "/fortress/aws_region"},
        {"name": "jumpbox_public_key", "path": "/fortress/jumpbox_public_key"},
-       {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"}
+       {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"},
+      
+       {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
+       {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
+       {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"}
    ],
    "raw_vars":[
       {"name":"env_infrastructure_tag", "value": "master"},
