@@ -3,125 +3,17 @@
     "repo_private_key_var_name": "git_private_key",
     "repo_version": "master",
     "file": "ci/pipelines/deploy_pipeline2.yml",
-    "append": [
-        {
-            "repo_url": "ssh@grapeup/gu_bosh_deployment.git",
-            "repo_private_key_var_name": "git_private_key",
-            "repo_version": "master",
-            "file": "ci/pipelines/deploy_pipeline.yml",
-            "append": [
-                {
-                    "repo_url": "ssh@grapeup/gu_cf_deployment.git",
-                    "repo_private_key_var_name": "git_private_key",
-                    "repo_version": "master",
-                    "file": "ci/pipelines/deploy_pipeline.yml"
-                },
-                {
-                    "repo_url": "ssh@grapeup/gu_concourse_deployment.git",
-                    "repo_private_key_var_name": "git_private_key",
-                    "repo_version": "master",
-                    "file": "ci/pipelines/deploy_pipeline.yml"
-                }
-            ]
-        }
-    ],
 
     "credhub_vars": [
         {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"}
-        {"name": "concourse_utils_repo_private_key", "path": "/fortress/git_private_key"}
-
-        {"name": "terraform_state_bucket_name", "path": "/fortress/terraform_state_bucket_id"}
-        {"name": "terraform_state_s3_access_key", "path": "/fortress/aws_access_key"}
-        {"name": "terraform_state_s3_secret_key", "path": "/fortress/aws_secret_key"}
-
-        {"name": "bosh_state_bucket_name", "path": "/fortress/bosh_state_bucket_id"}
-
-        {"name": "aws_access_key", "path": "/fortress/aws_access_key"}
-        {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"}
-
-        {"name": "fortress_cidr", "path": "/fortress/vpc_cidr"}
-        {"name": "fortress_vpc_id", "path": "/fortress/vpc_id"}
-        {"name": "fortress_aws_access_key", "path": "/fortress/aws_access_key"}
-        {"name": "fortress_aws_secret_key", "path": "/fortress/aws_secret_key"}
-        {"name": "fortress_aws_account_id", "path": "/fortress/aws_account_id"}
-        {"name": "fortress_aws_region", "path": "/fortress/aws_region"}
-        {"name": "tools_01_route_table_id", "path": "/fortress/tools_01_route_table_id"}
-        {"name": "tools_02_route_table_id", "path": "/fortress/tools_02_route_table_id"}
-
-        {"name": "jumpbox_ami", "path": "/fortress/jumpbox_ami"}
-        {"name": "jumpbox_public_key", "path": "/fortress/jumpbox_public_key"}
-        {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"}
-        {"name": "bosh_public_key", "path": "/fortress/bosh_public_key"}
-        {"name": "bosh_private_key", "path": "/fortress/bosh_private_key"}
     ],
 
     "placeholders": [
-        {"name": "___ENV_NAME___",  "value": "cf-test-1"},
-        {"name": "___S3_REGION___",  "value": "eu-central-1"},
-        {"name": "___EC2_REGION___",  "value": "eu-central-1"},
-        {"name": "___NETWORK_PREFIX___",  "value": "10.99"},
-        {"name": "___ROOT_DOMAIN___",  "value": "cflab.grapeup.com"},
+        {"name": "___ENV_NAME___",  "value": "cf-test-1"}
     ],
 
     "raw_vars": [
-        {"name": "infrastructure_deployment_repo_url", "value": "git@github.com:grapeup/gu_infrastructure_deployment.git"},
-        {"name": "infrastructure_deployment_version",  "value": "master"},
-        {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
-        {"name": "concourse_utils_version",  "value": "master"},
-
-        {"name": "az_1", "value": "___EC2_REGION___a"},
-        {"name": "az_2", "value": "___EC2_REGION___b"},
-
-        {"name": "concourse_certificate_arn", "value": "arn:aws:acm:eu-central-1:288596318286:certificate/8321c7da-1b05-47dc-a77b-33f2d35d8148"},
-        {"name": "cf_certificate_arn", "value": "arn:aws:acm:eu-central-1:288596318286:certificate/8321c7da-1b05-47dc-a77b-33f2d35d8148"},
-
-
-        {"name": "terraform_state_filename", "value": "___ENV_NAME___.tfstate"},
-        {"name": "terraform_state_s3_region", "value": "___S3_REGION___"},
-
-        {"name": "bosh_state_filename", "value": "___ENV_NAME___.tar"},
-        {"name": "bosh_state_s3_region", "value": "___S3_REGION___"},
-
-        {"name": "aws_region", "value": "___EC2_REGION___"},
-        
-        {"name": "network_cidr", "value": "___NETWORK_PREFIX___.0.0/16"},
-        {"name": "vpc_name", "value": "___ENV_NAME___"},
-
-        {"name": "ops_subnet_cidr", "value": "___NETWORK_PREFIX___.0.0/24"},
-
-        {"name": "bosh_subnet_cidr", "value": "___NETWORK_PREFIX___.1.0/24"},
-        {"name": "bosh_gateway_ip", "value": "___NETWORK_PREFIX___.1.1"},
-        {"name": "bosh_reserved_ips", "value": "___NETWORK_PREFIX___.1.2-___NETWORK_PREFIX___.1.3"},
-
-        {"name": "dmz_01_subnet_cidr", "value": "___NETWORK_PREFIX___.2.0/24"},
-        {"name": "dmz_01_gateway_ip", "value": "___NETWORK_PREFIX___.2.1"},
-        {"name": "dmz_01_reserved_ips", "value": "___NETWORK_PREFIX___.2.2-___NETWORK_PREFIX___.2.3"},
-
-        {"name": "dmz_02_subnet_cidr", "value": "___NETWORK_PREFIX___.3.0/24"},
-        {"name": "dmz_02_gateway_ip", "value": "___NETWORK_PREFIX___.3.1"},
-        {"name": "dmz_02_reserved_ips", "value": "___NETWORK_PREFIX___.3.2-___NETWORK_PREFIX___.3.3"},
-
-        {"name": "tools_01_subnet_cidr", "value": "___NETWORK_PREFIX___.10.0/24"},
-        {"name": "tools_01_gateway_ip", "value": "___NETWORK_PREFIX___.10.1"},
-        {"name": "tools_01_reserved_ips", "value": "___NETWORK_PREFIX___.10.2-___NETWORK_PREFIX___.10.3"},
-
-        {"name": "tools_02_subnet_cidr", "value": "___NETWORK_PREFIX___.11.0/24"},
-        {"name": "tools_02_gateway_ip", "value": "___NETWORK_PREFIX___.11.1"},
-        {"name": "tools_02_reserved_ips", "value": "___NETWORK_PREFIX___.11.2-___NETWORK_PREFIX___.11.3"},
-
-        {"name": "cf_01_subnet_cidr", "value": "___NETWORK_PREFIX___.16.0/20"},
-        {"name": "cf_01_gateway_ip", "value": "___NETWORK_PREFIX___.16.1"},
-        {"name": "cf_01_reserved_ips", "value": "___NETWORK_PREFIX___.16.2-___NETWORK_PREFIX___.16.3"},
-
-        {"name": "cf_02_subnet_cidr", "value": "___NETWORK_PREFIX___.32.0/20"},
-        {"name": "cf_02_gateway_ip", "value": "___NETWORK_PREFIX___.32.1"},
-        {"name": "cf_02_reserved_ips", "value": "___NETWORK_PREFIX___.32.2-___NETWORK_PREFIX___.32.3"},
-
-        {"name": "bosh_instance_ip", "value": "___NETWORK_PREFIX___.1.6"},
-        {"name": "bosh_backup_filename", "value": "bosh____NETWORK_PREFIX___.1.6.tgz"},
-
-        {"name": "system_domain", "value": "___ENV_NAME___.___ROOT_DOMAIN___"},
-        {"name": "env_name", "value": "___ENV_NAME___"}
+        {"name": "infrastructure_deployment_repo_url", "value": "git@github.com:grapeup/gu_infrastructure_deployment.git"}
     ],
 
     "trigger": {
