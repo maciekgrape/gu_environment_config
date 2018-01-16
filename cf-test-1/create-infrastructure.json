@@ -11,6 +11,10 @@
    ],
    "raw_vars":[
       {
+         "name": "terraform_state_bucket_name", 
+         "value": "terraform-state.cflab.grapeup.com"
+      },
+      {
          "name":"terraform_state_filename",
          "value":"inf-dev.tfstate"
       },
