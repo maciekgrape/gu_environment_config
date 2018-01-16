@@ -8,8 +8,7 @@
                "file":"ci/pipelines/test_rc_pipeline.yml"
             }
          ],
-         "name":"rc-pipeline",
-         "file":"ci/pipelines/rc_pipeline.yml",
+         "name":"remove-config-test",
          "vars":[
 
          ]
