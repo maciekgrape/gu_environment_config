@@ -26,7 +26,11 @@
        {"name": "fortress_vpc_id", "path": "/fortress/vpc_id"},
        {"name": "jumpbox_ami", "path": "/fortress/jumpbox_ami"},
        {"name": "tools_01_route_table_id", "path": "/fortress/tools_01_route_table_id"},
-       {"name": "tools_02_route_table_id", "path": "/fortress/tools_02_route_table_id"}
+       {"name": "tools_02_route_table_id", "path": "/fortress/tools_02_route_table_id"},
+      
+       {"name": "aws_region", "path": "/fortress/aws_region"}
+       {"name": "jumpbox_public_key", "path": "/fortress/jumpbox_public_key"},
+       {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"}
    ],
    "raw_vars":[
       {"name":"env_infrastructure_tag", "value": "master"},
