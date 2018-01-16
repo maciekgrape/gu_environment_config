@@ -1,0 +1,14 @@
+{
+    "repo_url": "git@github.com:grapeup/gu_infrastructure_deployment.git",
+    "repo_private_key_var_name": "git_private_key",
+    "repo_version": "master",
+    "file": "ci/pipelines/dev_pipeline.yml",
+
+    "credhub_vars": [
+        {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"}
+    ],
+
+    "raw_vars": [
+        {"name": "infrastructure_deployment_repo_url", "value": "git@github.com:grapeup/gu_infrastructure_deployment.git"}
+    ]
+}
