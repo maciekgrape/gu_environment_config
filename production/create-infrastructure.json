@@ -33,7 +33,7 @@
        {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
        {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
 
-       {"name":"locks_repo_private_key", "value":"/fortress/git_private_key"}
+       {"name":"locks_repo_private_key", "path":"/fortress/git_private_key"}
    ],
    "raw_vars":[
       {"name":"locks_repo_uri", "value":"git@github.com:grapeup/gu_concourse_locks.git"},
