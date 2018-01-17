@@ -46,6 +46,9 @@
      {"name":"bosh_state_bucket_name","value":"bosh-state.deployment-dev.cflab.grapeup.com"},
      {"name":"bosh_state_filename","value":"deployment-dev.tar"},
 
+     {"name": "bosh_releases_bucket", "value": "bosh-releases.devops-frankfurt.cflab.grapeup.com"},
+     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
+
      {"name":"network_cidr","value":"10.92.0.0/16"},
      {"name":"vpc_name","value":"cf"},
 
