@@ -34,6 +34,7 @@
        {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"}
    ],
    "raw_vars":[
+      {"name":"infrastructure_deployment_version", "value":"master"},
       {"name":"trigger_on_repo_change", "value": "false"},
 
       {"name":"terraform_state_aws_region", "value": "eu-west-2"},
