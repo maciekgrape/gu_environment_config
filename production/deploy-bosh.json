@@ -39,7 +39,7 @@
       {"name": "bosh_backup_s3_secret_key", "path": "/fortress/aws_secret_key"}
   ],
   "raw_vars":[
-     {"name":"env_infrastructure_tag", "value": "master"},
+     {"name":"bosh_deployment_tag", "value": "master"},
 
      {"name":"terraform_state_aws_region", "value": "eu-west-2"},
      {"name":"terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
