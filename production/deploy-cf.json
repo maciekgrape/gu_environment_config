@@ -28,6 +28,9 @@
      {"name":"cf_deployment_version", "value":"master"},
      {"name":"trigger_on_repo_change", "value": "false"},
 
+     {"name": "bosh_releases_bucket", "value": "bosh-releases.devops-frankfurt.cflab.grapeup.com"},
+     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
+
      {"name":"terraform_state_aws_region", "value": "eu-west-2"},
      {"name":"terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
      {"name":"terraform_state_filename","value":"cf-min.tfstate"},
