@@ -34,7 +34,7 @@
        {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"}
    ],
    "raw_vars":[
-      {"name":"trigger_on_repo_change", "value": "true"},
+      {"name":"trigger_on_repo_change", "value": "false"},
 
       {"name":"terraform_state_aws_region", "value": "eu-west-2"},
       {"name":"terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
