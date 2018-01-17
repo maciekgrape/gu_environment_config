@@ -33,8 +33,8 @@
        {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
        {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
 
-       {"name":"locker_url", "path":"/fortress/locker_url"}
-       {"name":"locker_username", "path":"/fortress/locker_username"}
+       {"name":"locker_url", "path":"/fortress/locker_url"},
+       {"name":"locker_username", "path":"/fortress/locker_username"},
        {"name":"locker_password", "path":"/fortress/locker_password"}
    ],
    "raw_vars":[
