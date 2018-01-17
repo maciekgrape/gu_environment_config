@@ -18,10 +18,17 @@
 
       {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
       {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
-      {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"}
+      {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
+
+      {"name":"locks_repo_private_key", "path":"/fortress/git_private_key"}
   ],
   "raw_vars":[
-     {"name":"bosh_deployment_tag", "value": "master"},
+     {"name":"locks_repo_uri", "value":"git@github.com:grapeup/gu_concourse_locks.git"},
+     {"name":"locks_repo_branch", "value":"master"},
+     {"name":"locks_pool", "value":"cf-min"},
+
+     {"name":"bosh_deployment_version", "value":"master"},
+     {"name":"trigger_on_repo_change", "value": "false"},
 
      {"name":"terraform_state_aws_region", "value": "eu-west-2"},
      {"name":"terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
