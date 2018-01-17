@@ -4,7 +4,7 @@
   "repo_version": "master",
   "file": "ci/pipelines/dev_pipeline.yml",
   "credhub_vars":[
-      {"name":"bosh_deployment_repo_private_key", "path":"/fortress/git_private_key"},
+      {"name":"infrastructure_deployment_repo_private_key", "path":"/fortress/git_private_key"},
       {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
       {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
       {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
