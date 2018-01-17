@@ -41,7 +41,7 @@
       {"name":"locks_pool", "value":"inf-dev"},
 
       {"name":"infrastructure_deployment_version", "value":"master"},
-      {"name":"trigger_on_repo_change", "value": true},
+      {"name":"trigger_on_repo_change", "value": "true"},
 
       {"name": "terraform_state_aws_region", "value": "eu-west-2"},
       {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
