@@ -76,7 +76,6 @@
       {"name":"cf_02_gateway_ip","value":"10.90.32.1"},
       {"name":"cf_02_reserved_ips","value":"10.90.32.2-10.90.32.3"},
 
-      {"name":"bosh_instance_ip","value":"10.90.1.6"},
-      {"name":"bosh_backup_filename","value":"bosh_10.90.1.6.tgz"}
+      {"name":"bosh_instance_ip","value":"10.90.1.6"}
    ]
 }
