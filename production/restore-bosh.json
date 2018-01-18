@@ -2,7 +2,7 @@
   "repo_url": "git@github.com:grapeup/gu_bosh_deployment.git",
   "repo_private_key_var_name": "git_private_key",
   "repo_version": "master",
-  "file": "ci/pipelines/backup_pipeline.yml",
+  "file": "ci/pipelines/restore_pipeline.yml",
   "credhub_vars":[
     {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
@@ -16,11 +16,9 @@
   ],
   "raw_vars":[
      {"name":"bosh_deployment_version", "value":"master"},
-     
+
      {"name":"bosh_state_bucket_name","value":"bosh-state.cf-min.cflab.grapeup.com"},
      {"name":"bosh_state_filename","value":"cf-min.tar"},
-
-     {"name":"backup_interval","value":"12h"},
 
      {"name":"system_domain","value":"cf-min.cflab.grapeup.com"},
      {"name":"bosh_instance_ip","value":"10.90.1.6"}
