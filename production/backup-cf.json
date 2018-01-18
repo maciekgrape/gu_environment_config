@@ -7,7 +7,7 @@
     {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
     {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
-    {"name": "bosh_deployment_repo_private_key", "path":"/fortress/git_private_key"},
+    {"name": "cf_deployment_repo_private_key", "path":"/fortress/git_private_key"},
 
     {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
     {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"},
