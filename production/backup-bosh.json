@@ -4,8 +4,14 @@
   "repo_version": "master",
   "file": "ci/pipelines/backup_pipeline.yml",
   "credhub_vars":[
+    {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
+    {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
+    {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
+    {"name": "bosh_deployment_repo_private_key", "path":"/fortress/git_private_key"}
 
   ],
   "raw_vars":[
+     {"name":"bosh_state_bucket_name","value":"bosh-state.cf-min.cflab.grapeup.com"},
+     {"name":"bosh_state_filename","value":"cf-min.tar"}
   ]
 }
