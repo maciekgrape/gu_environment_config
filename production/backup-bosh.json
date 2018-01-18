@@ -18,7 +18,9 @@
      {"name":"bosh_state_bucket_name","value":"bosh-state.cf-min.cflab.grapeup.com"},
      {"name":"bosh_state_filename","value":"cf-min.tar"},
 
-    {"name":"system_domain","value":"cf-min.cflab.grapeup.com"},
-    {"name":"bosh_instance_ip","value":"10.90.1.6"}
+     {"name":"backup_interval","value":"12h"},
+
+     {"name":"system_domain","value":"cf-min.cflab.grapeup.com"},
+     {"name":"bosh_instance_ip","value":"10.90.1.6"}
   ]
 }
