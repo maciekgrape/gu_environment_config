@@ -1,0 +1,11 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_bosh_deployment.git",
+  "repo_private_key_var_name": "git_private_key",
+  "repo_version": "master",
+  "file": "ci/pipelines/backup_pipeline.yml",
+  "credhub_vars":[
+
+  ],
+  "raw_vars":[
+  ]
+}
