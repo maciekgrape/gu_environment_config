@@ -1,7 +1,7 @@
 {
   "repo_url": "git@github.com:grapeup/gu_bosh_deployment.git",
   "repo_private_key_var_name": "git_private_key",
-  "repo_version": "master",
+  "repo_version": "1.0.0",
   "file": "ci/pipelines/deploy_pipeline.yml",
   "credhub_vars":[
       {"name": "bosh_deployment_repo_private_key", "path":"/fortress/git_private_key"},
