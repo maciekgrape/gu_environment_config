@@ -29,7 +29,7 @@
      {"name":"system_domain","value":"cf-min.cflab.grapeup.com"},
      {"name":"env_name","value":"cf-min"},
 
-     {"name": "bosh_releases_bucket", "value": "bosh-releases.devops-frankfurt.cflab.grapeup.com"},
+     {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},
      {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
      {"name":"bosh_state_bucket_name","value":"bosh-state.cf-min.cflab.grapeup.com"},
