@@ -54,7 +54,7 @@
       {"name":"bosh_state_filename","value":"inf-dev.tar"},
 
       {"name":"network_cidr","value":"10.94.0.0/16"},
-      {"name":"vpc_name","value":"cf"},
+      {"name":"vpc_name","value":"inf-dev"},
 
       {"name":"ops_subnet_cidr","value":"10.94.0.0/24"},
 
