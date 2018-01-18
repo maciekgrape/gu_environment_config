@@ -9,6 +9,10 @@
     {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
     {"name": "concourse_deployment_repo_private_key", "path":"/fortress/git_private_key"},
 
+    {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
+    {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"},
+    {"name": "aws_region", "path": "/fortress/aws_region"},
+
     {"name": "concourse_backup_bucket_name", "path": "/fortress/backups_bucket_id"},
     {"name": "concourse_backup_bucket_region", "path": "/fortress/aws_region"},
     {"name": "concourse_backup_s3_access_key", "path": "/fortress/aws_access_key"},
