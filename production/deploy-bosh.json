@@ -20,12 +20,13 @@
       {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
       {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
 
-      {"name":"locks_repo_private_key", "path":"/fortress/git_private_key"}
+      {"name":"locker_password", "path":"/fortress/locker_password"},
+      {"name":"locker_url", "path":"/fortress/locker_url"},
+      {"name":"locker_username", "path":"/fortress/locker_username"}
+
   ],
   "raw_vars":[
-     {"name":"locks_repo_uri", "value":"git@github.com:grapeup/gu_concourse_locks.git"},
-     {"name":"locks_repo_branch", "value":"master"},
-     {"name":"locks_pool", "value":"cf-min"},
+     {"name":"locker_lock_name", "value":"cf-min"},
 
      {"name":"bosh_deployment_version", "value":"master"},
      {"name":"trigger_on_repo_change", "value": "false"},

@@ -39,10 +39,7 @@
 
    ],
    "raw_vars":[
-      {"name":"locks_repo_uri", "value":"git@github.com:grapeup/gu_concourse_locks.git"},
-      {"name":"locks_repo_branch", "value":"master"},
-
-      {"name":"locker_lock_name", "value":"cfmin"},
+      {"name":"locker_lock_name", "value":"cf-min"},
 
       {"name":"infrastructure_deployment_version", "value":"master"},
       {"name":"trigger_on_repo_change", "value": "false"},
