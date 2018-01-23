@@ -19,7 +19,7 @@
     {"name": "cf_backup_s3_secret_key", "path": "/fortress/aws_secret_key"}
   ],
   "raw_vars":[
-     {"name": "cf_deployment_version", "value": "master"},
+     {"name": "cf_deployment_version", "value": "1.0.0"},
 
      {"name": "bosh_state_bucket_name", "value": "bosh-state.cf-min.cflab.grapeup.com"},
      {"name": "bosh_state_filename", "value": "cf-min.tar"},

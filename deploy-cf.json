@@ -26,7 +26,7 @@
   "raw_vars":[
      {"name": "locker_lock_name", "value": "cf-min"},
 
-     {"name": "cf_deployment_version", "value": "master"},
+     {"name": "cf_deployment_version", "value": "1.0.0"},
      {"name": "trigger_on_repo_change", "value": "false"},
 
      {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},

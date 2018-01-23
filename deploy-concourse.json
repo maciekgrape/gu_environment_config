@@ -23,7 +23,7 @@
   "raw_vars":[
      {"name": "locker_lock_name", "value": "cf-min"},
 
-     {"name": "concourse_deployment_version", "value": "master"},
+     {"name": "concourse_deployment_version", "value": "1.0.0"},
      {"name": "trigger_on_repo_change", "value": "false"},
 
      {"name": "terraform_state_aws_region", "value": "eu-west-2"},
