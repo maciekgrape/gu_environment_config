@@ -7,7 +7,7 @@
     {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
     {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
-    {"name": "bosh_deployment_repo_private_key", "path":"/fortress/git_private_key"},
+    {"name": "bosh_deployment_repo_private_key", "path": "/fortress/git_private_key"},
 
     {"name": "bosh_backup_bucket_name", "path": "/fortress/backups_bucket_id"},
     {"name": "bosh_backup_bucket_region", "path": "/fortress/aws_region"},
@@ -15,12 +15,12 @@
     {"name": "bosh_backup_s3_secret_key", "path": "/fortress/aws_secret_key"}
   ],
   "raw_vars":[
-     {"name":"bosh_deployment_version", "value":"master"},
+     {"name": "bosh_deployment_version", "value": "master"},
 
-     {"name":"bosh_state_bucket_name","value":"bosh-state.cf-min.cflab.grapeup.com"},
-     {"name":"bosh_state_filename","value":"cf-min.tar"},
+     {"name": "bosh_state_bucket_name", "value": "bosh-state.cf-min.cflab.grapeup.com"},
+     {"name": "bosh_state_filename", "value": "cf-min.tar"},
 
-     {"name":"system_domain","value":"cf-min.cflab.grapeup.com"},
-     {"name":"bosh_instance_ip","value":"10.90.1.6"}
+     {"name": "system_domain", "value": "cf-min.cflab.grapeup.com"},
+     {"name": "bosh_instance_ip", "value": "10.90.1.6"}
   ]
 }
