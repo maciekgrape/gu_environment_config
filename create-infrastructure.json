@@ -3,7 +3,8 @@
    "repo_private_key_var_name": "git_private_key",
    "repo_version": "master",
    "file": "ci/pipelines/deploy_pipeline.yml",
-   "credhub_vars":[
+
+   "credhub_vars": [
        {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"},
        {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
        {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
@@ -35,9 +36,12 @@
 
        {"name": "locker_url", "path": "/fortress/locker_url"},
        {"name": "locker_username", "path": "/fortress/locker_username"},
-       {"name": "locker_password", "path": "/fortress/locker_password"}
+       {"name": "locker_password", "path": "/fortress/locker_password"},
+
+       {"name": "git_private_key", "path": "/fortress/git_private_key"}
    ],
-   "raw_vars":[
+
+   "raw_vars": [
       {"name": "locker_lock_name", "value": "inf-dev-infrastructure-lock"},
 
       {"name": "infrastructure_deployment_version", "value": "master"},
