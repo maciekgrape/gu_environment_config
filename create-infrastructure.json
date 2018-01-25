@@ -42,7 +42,7 @@
    ],
 
    "raw_vars": [
-      {"name": "locker_lock_name", "value": "inf-dev-infrastructure-lock"},
+      {"name": "locker_lock_name", "value": "inf-dev"},
 
       {"name": "infrastructure_deployment_version", "value": "master"},
       {"name": "trigger_on_repo_change", "value": "true"},
