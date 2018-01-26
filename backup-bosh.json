@@ -14,7 +14,11 @@
         {"name": "bosh_backup_bucket_name", "path": "/fortress/backups_bucket_id"},
         {"name": "bosh_backup_bucket_region", "path": "/fortress/aws_region"},
         {"name": "bosh_backup_s3_access_key", "path": "/fortress/aws_access_key"},
-        {"name": "bosh_backup_s3_secret_key", "path": "/fortress/aws_secret_key"}
+        {"name": "bosh_backup_s3_secret_key", "path": "/fortress/aws_secret_key"},
+
+        {"name": "locker_password", "path": "/fortress/locker_password"},
+        {"name": "locker_url", "path": "/fortress/locker_url"},
+        {"name": "locker_username", "path": "/fortress/locker_username"}
     ],
 
     "raw_vars": [
