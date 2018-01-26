@@ -1,17 +1,16 @@
 {
-  "repo_url": "git@github.com:grapeup/gu_cf_deployment.git",
+  "repo_url": "git@github.com:grapeup/gu_concourse_deployment.git",
   "repo_private_key_var_name": "git_private_key",
   "repo_version": "master",
   "file": "ci/pipelines/deploy_pipeline.yml",
 
   "credhub_vars":[
-    {"name": "cf_deployment_repo_private_key", "path": "/fortress/git_private_key"},
+    {"name": "concourse_deployment_repo_private_key", "path": "/fortress/git_private_key"},
     {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
     {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
 
     {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
     {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"},
-    {"name": "aws_region", "path": "/fortress/aws_region"},
 
     {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"},
     {"name": "git_private_key", "path": "/fortress/git_private_key"},
@@ -26,11 +25,8 @@
   ],
 
   "raw_vars":[
-    {"name": "cf_deployment_version", "value": "master"},
+    {"name": "concourse_deployment_version", "value": "master"},
     {"name": "trigger_on_repo_change", "value": "true"},
-
-    {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},
-    {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "terraform_state_aws_region", "value": "eu-west-2"},
     {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
@@ -38,6 +34,9 @@
 
     {"name": "system_domain", "value": "bosh-dev.cflab.grapeup.com"},
     {"name": "env_name", "value": "bosh-dev"},
+
+    {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},
+    {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "bosh_state_bucket_name", "value": "bosh-state.bosh-dev.cflab.grapeup.com"},
     {"name": "bosh_state_filename", "value": "bosh-dev.tar"},
