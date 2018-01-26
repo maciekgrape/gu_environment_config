@@ -1,7 +1,7 @@
 {
    "repo_url": "git@github.com:grapeup/gu_infrastructure_deployment.git",
    "repo_private_key_var_name": "git_private_key",
-   "repo_version": "master",
+   "repo_version": "1.0.0-rc1",
    "file": "ci/pipelines/deploy_pipeline.yml",
 
    "credhub_vars": [
@@ -43,8 +43,7 @@
 
    "raw_vars": [
       {"name": "env_name", "value": "bosh-dev"},
-
-      {"name": "infrastructure_deployment_version", "value": "master"},
+      {"name": "infrastructure_deployment_version", "value": "1.0.0-rc1"},
       {"name": "trigger_on_repo_change", "value": "false"},
 
       {"name": "terraform_state_aws_region", "value": "eu-west-2"},
