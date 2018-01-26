@@ -1,0 +1,40 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_concourse_deployment.git",
+  "repo_private_key_var_name": "git_private_key",
+  "repo_version": "master",
+  "file": "ci/pipelines/backup_pipeline.yml",
+
+  "credhub_vars":[
+    {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
+    {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
+    {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
+    {"name": "concourse_deployment_repo_private_key", "path": "/fortress/git_private_key"},
+
+    {"name": "aws_access_key", "path": "/fortress/aws_access_key"},
+    {"name": "aws_secret_key", "path": "/fortress/aws_secret_key"},
+    {"name": "aws_region", "path": "/fortress/aws_region"},
+
+    {"name": "concourse_backup_bucket_name", "path": "/fortress/backups_bucket_id"},
+    {"name": "concourse_backup_bucket_region", "path": "/fortress/aws_region"},
+    {"name": "concourse_backup_s3_access_key", "path": "/fortress/aws_access_key"},
+    {"name": "concourse_backup_s3_secret_key", "path": "/fortress/aws_secret_key"},
+
+    {"name": "locker_password", "path": "/fortress/locker_password"},
+    {"name": "locker_url", "path": "/fortress/locker_url"},
+    {"name": "locker_username", "path": "/fortress/locker_username"}
+  ],
+
+  "raw_vars":[
+    {"name": "concourse_deployment_version", "value": "master"},
+
+    {"name": "bosh_state_bucket_name", "value": "bosh-state.bosh-dev.cflab.grapeup.com"},
+    {"name": "bosh_state_filename", "value": "bosh-dev.tar"},
+
+    {"name": "backup_interval", "value": "12h"},
+
+    {"name": "system_domain", "value": "bosh-dev.cflab.grapeup.com"},
+    {"name": "env_name", "value": "bosh-dev"},
+
+    {"name": "bosh_instance_ip", "value": "10.92.1.6"}
+  ]
+}
