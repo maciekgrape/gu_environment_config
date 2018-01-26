@@ -17,6 +17,7 @@
         {"name": "aws_region", "path": "/fortress/aws_region"},
 
         {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"},
+        {"name": "bosh_private_key", "path": "/fortress/bosh_private_key"},
         {"name": "git_private_key", "path": "/fortress/git_private_key"},
         
         {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
