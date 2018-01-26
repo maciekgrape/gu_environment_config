@@ -15,7 +15,9 @@
         {"name": "az_1", "path": "/fortress/az_1"},
         {"name": "az_2", "path": "/fortress/az_2"},
         {"name": "aws_region", "path": "/fortress/aws_region"},
+
         {"name": "jumpbox_private_key", "path": "/fortress/jumpbox_private_key"},
+        {"name": "git_private_key", "path": "/fortress/git_private_key"},
         
         {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
         {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
