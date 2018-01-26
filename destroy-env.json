@@ -2,9 +2,8 @@
    "repo_url": "git@github.com:grapeup/gu_infrastructure_deployment.git",
    "repo_private_key_var_name": "git_private_key",
    "repo_version": "master",
-   "file": "ci/pipelines/deploy_pipeline.yml",
-
-   "credhub_vars": [
+   "file": "ci/pipelines/destroy_everything.yml",
+   "credhub_vars":[
        {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"},
        {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
        {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
@@ -36,12 +35,9 @@
 
        {"name": "locker_url", "path": "/fortress/locker_url"},
        {"name": "locker_username", "path": "/fortress/locker_username"},
-       {"name": "locker_password", "path": "/fortress/locker_password"},
-
-       {"name": "git_private_key", "path": "/fortress/git_private_key"}
+       {"name": "locker_password", "path": "/fortress/locker_password"}
    ],
-
-   "raw_vars": [
+   "raw_vars":[
       {"name": "locker_lock_name", "value": "inf-dev"},
 
       {"name": "infrastructure_deployment_version", "value": "master"},
@@ -57,35 +53,35 @@
       {"name": "bosh_state_bucket_name", "value": "bosh-state.inf-dev.cflab.grapeup.com"},
       {"name": "bosh_state_filename", "value": "inf-dev.tar"},
 
-      {"name": "network_cidr", "value": "10.94.0.0/16"},
+      {"name": "network_cidr", "value": "10.91.0.0/16"},
 
-      {"name": "ops_subnet_cidr", "value": "10.94.0.0/24"},
+      {"name": "ops_subnet_cidr", "value": "10.91.0.0/24"},
 
-      {"name": "bosh_subnet_cidr", "value": "10.94.1.0/24"},
-      {"name": "bosh_gateway_ip", "value": "10.94.1.1"},
-      {"name": "bosh_reserved_ips", "value": "10.94.1.2-10.94.1.3"},
+      {"name": "bosh_subnet_cidr", "value": "10.91.1.0/24"},
+      {"name": "bosh_gateway_ip", "value": "10.91.1.1"},
+      {"name": "bosh_reserved_ips", "value": "10.91.1.2-10.91.1.3"},
 
-      {"name": "dmz_01_subnet_cidr", "value": "10.94.2.0/24"},
-      {"name": "dmz_01_gateway_ip", "value": "10.94.2.1"},
-      {"name": "dmz_01_reserved_ips", "value": "10.94.2.2-10.94.2.3"},
-      {"name": "dmz_02_subnet_cidr", "value": "10.94.3.0/24"},
-      {"name": "dmz_02_gateway_ip", "value": "10.94.3.1"},
-      {"name": "dmz_02_reserved_ips", "value": "10.94.3.2-10.94.3.3"},
+      {"name": "dmz_01_subnet_cidr", "value": "10.91.2.0/24"},
+      {"name": "dmz_01_gateway_ip", "value": "10.91.2.1"},
+      {"name": "dmz_01_reserved_ips", "value": "10.91.2.2-10.91.2.3"},
+      {"name": "dmz_02_subnet_cidr", "value": "10.91.3.0/24"},
+      {"name": "dmz_02_gateway_ip", "value": "10.91.3.1"},
+      {"name": "dmz_02_reserved_ips", "value": "10.91.3.2-10.91.3.3"},
 
-      {"name": "tools_01_subnet_cidr", "value": "10.94.10.0/24"},
-      {"name": "tools_01_gateway_ip", "value": "10.94.10.1"},
-      {"name": "tools_01_reserved_ips", "value": "10.94.10.2-10.94.10.3"},
-      {"name": "tools_02_subnet_cidr", "value": "10.94.11.0/24"},
-      {"name": "tools_02_gateway_ip", "value": "10.94.11.1"},
-      {"name": "tools_02_reserved_ips", "value": "10.94.11.2-10.94.11.3"},
+      {"name": "tools_01_subnet_cidr", "value": "10.91.10.0/24"},
+      {"name": "tools_01_gateway_ip", "value": "10.91.10.1"},
+      {"name": "tools_01_reserved_ips", "value": "10.91.10.2-10.91.10.3"},
+      {"name": "tools_02_subnet_cidr", "value": "10.91.11.0/24"},
+      {"name": "tools_02_gateway_ip", "value": "10.91.11.1"},
+      {"name": "tools_02_reserved_ips", "value": "10.91.11.2-10.91.11.3"},
 
-      {"name": "cf_01_subnet_cidr", "value": "10.94.16.0/20"},
-      {"name": "cf_01_gateway_ip", "value": "10.94.16.1"},
-      {"name": "cf_01_reserved_ips", "value": "10.94.16.2-10.94.16.3"},
-      {"name": "cf_02_subnet_cidr", "value": "10.94.32.0/20"},
-      {"name": "cf_02_gateway_ip", "value": "10.94.32.1"},
-      {"name": "cf_02_reserved_ips", "value": "10.94.32.2-10.94.32.3"},
+      {"name": "cf_01_subnet_cidr", "value": "10.91.16.0/20"},
+      {"name": "cf_01_gateway_ip", "value": "10.91.16.1"},
+      {"name": "cf_01_reserved_ips", "value": "10.91.16.2-10.91.16.3"},
+      {"name": "cf_02_subnet_cidr", "value": "10.91.32.0/20"},
+      {"name": "cf_02_gateway_ip", "value": "10.91.32.1"},
+      {"name": "cf_02_reserved_ips", "value": "10.91.32.2-10.91.32.3"},
 
-      {"name": "bosh_instance_ip", "value": "10.94.1.6"}
+      {"name": "bosh_instance_ip", "value": "10.91.1.6"}
    ]
 }
