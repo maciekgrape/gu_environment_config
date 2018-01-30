@@ -1,0 +1,22 @@
+{
+  "envs": [
+    {
+      "name": "prod",
+      "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+      "config_repo_branch": "prod",
+      "config_repo_private_key_credhub_path": "/fortress/git_private_key"
+    },
+    {
+      "name": "inf-dev",
+      "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+      "config_repo_branch": "inf-dev",
+      "config_repo_private_key_credhub_path": "/fortress/git_private_key"
+    },
+    {
+      "name": "bosh-dev",
+      "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+      "config_repo_branch": "bosh-dev",
+      "config_repo_private_key_credhub_path": "/fortress/git_private_key"
+    }
+  ]
+}
