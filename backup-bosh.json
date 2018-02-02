@@ -7,12 +7,12 @@
     "credhub_vars": [
         {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
         {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
-        {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
+        {"name": "bosh_state_s3_region", "path": "/bosh-dev/aws_region"},
 
         {"name": "bosh_deployment_repo_private_key", "path": "/fortress/git_private_key"},
 
         {"name": "bosh_backup_bucket_name", "path": "/fortress/backups_bucket_id"},
-        {"name": "bosh_backup_bucket_region", "path": "/fortress/aws_region"},
+        {"name": "bosh_backup_bucket_region", "path": "/bosh-dev/aws_region"},
         {"name": "bosh_backup_s3_access_key", "path": "/fortress/aws_access_key"},
         {"name": "bosh_backup_s3_secret_key", "path": "/fortress/aws_secret_key"},
 
