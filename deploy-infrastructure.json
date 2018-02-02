@@ -18,7 +18,7 @@
        {"name": "cf_certificate_arn", "path": "/fortress/cf_certificate_arn"},
        {"name": "fortress_aws_access_key", "path": "/fortress/aws_access_key"},
        {"name": "fortress_aws_secret_key", "path": "/fortress/aws_secret_key"},
-       {"name": "fortress_aws_region", "path": "/bosh-dev/aws_region"},
+       {"name": "fortress_aws_region", "path": "/fortress/aws_region"},
        {"name": "fortress_aws_account_id", "path": "/fortress/aws_account_id"},
        {"name": "fortress_cidr", "path": "/fortress/vpc_cidr"},
        {"name": "fortress_vpc_id", "path": "/fortress/vpc_id"},
