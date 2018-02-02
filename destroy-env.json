@@ -1,8 +1,8 @@
 {
    "repo_url": "git@github.com:grapeup/gu_infrastructure_deployment.git",
    "repo_private_key_var_name": "git_private_key",
-   "repo_version": "1.0.0-rc1",
-   "file": "ci/pipelines/destroy_everything.yml",
+   "repo_version": "master",
+   "file": "ci/pipelines/destroy_pipeline.yml",
    "credhub_vars":[
        {"name": "infrastructure_deployment_repo_private_key", "path": "/fortress/git_private_key"},
        {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
@@ -40,8 +40,8 @@
    "raw_vars":[
       {"name": "env_name", "value": "bosh-dev"},
 
-      {"name": "infrastructure_deployment_version", "value": "1.0.0-rc1"},
-      {"name": "trigger_on_repo_change", "value": "true"},
+      {"name": "infrastructure_deployment_version", "value": "master"},
+      {"name": "trigger_on_repo_change", "value": "false"},
 
       {"name": "terraform_state_aws_region", "value": "eu-west-2"},
       {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
