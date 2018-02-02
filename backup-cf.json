@@ -4,7 +4,7 @@
   "repo_version": "master",
   "file": "ci/pipelines/backup_pipeline.yml",
 
-  "credhub_vars":[
+  "credhub_vars": [
     {"name": "bosh_state_s3_access_key", "path": "/fortress/aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "path": "/fortress/aws_secret_key"},
     {"name": "bosh_state_s3_region", "path": "/fortress/aws_region"},
@@ -24,8 +24,13 @@
     {"name": "locker_username", "path": "/fortress/locker_username"}
   ],
 
-  "raw_vars":[
+  "raw_vars": [
     {"name": "cf_deployment_version", "value": "master"},
+
+    {"name": "env_lock_part_name", "value": "bosh-dev"},
+    {"name": "concurrent_deployments_lock_part_name", "value": "cf_or_concourse"},
+    {"name": "deployment_lock_part_name", "value": "cf"},
+    {"name": "pipeline_lock_part_name", "value": "backup"},
 
     {"name": "bosh_state_bucket_name", "value": "bosh-state.bosh-dev.cflab.grapeup.com"},
     {"name": "bosh_state_filename", "value": "bosh-dev.tar"},

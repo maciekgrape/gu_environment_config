@@ -4,7 +4,7 @@
   "repo_version": "master",
   "file": "ci/pipelines/deploy_pipeline.yml",
 
-  "credhub_vars":[
+  "credhub_vars": [
     {"name": "concourse_deployment_repo_private_key", "path": "/fortress/git_private_key"},
     {"name": "terraform_state_aws_access_key", "path": "/fortress/aws_access_key"},
     {"name": "terraform_state_aws_secret_key", "path": "/fortress/aws_secret_key"},
@@ -24,9 +24,14 @@
     {"name": "locker_username", "path": "/fortress/locker_username"}
   ],
 
-  "raw_vars":[
+  "raw_vars": [
     {"name": "concourse_deployment_version", "value": "master"},
     {"name": "trigger_on_repo_change", "value": "true"},
+
+    {"name": "env_lock_part_name", "value": "bosh-dev"},
+    {"name": "concurrent_deployments_lock_part_name", "value": "cf_or_concourse"},
+    {"name": "deployment_lock_part_name", "value": "concourse"},
+    {"name": "pipeline_lock_part_name", "value": "deploy"},
 
     {"name": "terraform_state_aws_region", "value": "eu-west-2"},
     {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
