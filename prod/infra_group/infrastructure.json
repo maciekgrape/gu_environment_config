@@ -13,7 +13,7 @@
         },
         {
             "name": "destroy_env",
-            "file": "ci/pipelines/deploy_everything.yml",
+            "file": "ci/pipelines/destroy_pipeline.yml",
             "vars": []
         }
     ],
