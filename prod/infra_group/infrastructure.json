@@ -36,6 +36,8 @@
         {"name": "fortress_aws_secret_key", "fortress_var": "aws_secret_key"},
         {"name": "fortress_cidr", "fortress_var": "vpc_cidr"},
         {"name": "fortress_vpc_id", "fortress_var": "vpc_id"},
+        {"name": "fortress_tools_01_route_table_id", "fortress_var": "tools_01_route_table_id"},
+        {"name": "fortress_tools_02_route_table_id", "fortress_var": "tools_02_route_table_id"}
 
         {"name": "jumpbox_ami", "fortress_var": "jumpbox_ami"},
         {"name": "jumpbox_public_key", "fortress_var": "jumpbox_public_key"},
