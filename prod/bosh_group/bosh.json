@@ -28,8 +28,8 @@
     "vars": [
         {"name": "bosh_backup_bucket_name", "value": "backups.devops.cflab.grapeup.com"},
         {"name": "bosh_backup_bucket_region", "value": "eu-central-1"},
-        {"name": "bosh_backup_s3_access_key", "fortress_var": "s3_access_key"},
-        {"name": "bosh_backup_s3_secret_key", "fortress_var": "s3_secret_key"},
+        {"name": "bosh_backup_s3_access_key", "fortress_var": "aws_access_key"},
+        {"name": "bosh_backup_s3_secret_key", "fortress_var": "aws_secret_key"},
 
         {"name": "bosh_gateway_ip", "value": "10.90.1.1"},
         {"name": "bosh_private_key", "fortress_var": "bosh_private_key"},
