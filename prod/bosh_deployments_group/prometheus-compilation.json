@@ -8,6 +8,8 @@
             "name": "compile_prometheus",
             "file": "ci/pipelines/compile_pipeline.yml",
             "vars": [
+                {"name":"release_compilator_version", "value":"master"},
+                {"name":"release_compilator_repo_private_key", "team_var":"git_private_key"}
             ]
         }
     ],
