@@ -48,6 +48,8 @@
         {"name": "ops_subnet_cidr", "value": "10.90.0.0/24"},
 
         {"name": "tools_01_subnet_cidr", "value": "10.90.10.0/24"},
-        {"name": "tools_02_subnet_cidr", "value": "10.90.11.0/24"}
+        {"name": "tools_02_subnet_cidr", "value": "10.90.11.0/24"},
+
+        {"name": "git_private_key", "fortress_var": "git_private_key"}
     ]
 }
