@@ -9,6 +9,21 @@
             "file": "ci/pipelines/compile_pipeline.yml",
             "vars": [
                 {"name":"release_compilator_version", "value":"master"},
+
+                {"name":"compiled_releases_bucket_name", "value":"compiled-releases.devops.cflab.grapeup.com"},
+                {"name":"compiled_releases_s3_region", "fortress_var":"aws_region"},
+                {"name":"compiled_releases_s3_access_key", "fortress_var":"aws_access_key"},
+                {"name":"compiled_releases_s3_secret_key", "fortress_var":"aws_secret_key"},
+
+                {"name":"release_url", "value":"https://github.com/bosh-prometheus/prometheus-boshrelease/releases/download/v21.0.1/prometheus-21.0.1.tgz"},
+                {"name":"release_name", "value":"prometheus"},
+                {"name":"release_version", "value":"21.0.1"},
+                {"name":"release_sha1", "value":"f26a98b9005683b5080b0dfaa2ba52cb81a33735"},
+
+                {"name":"stemcell_url", "value":"https://bosh.io/d/stemcells/bosh-aws-xen-hvm-ubuntu-trusty-go_agent?v=3431.13"},
+                {"name":"stemcell_version", "value":"3431.13"},
+                {"name":"stemcell_os", "value":"ubuntu-trusty"},
+
                 {"name":"release_compilator_repo_private_key", "team_var":"git_private_key"}
             ]
         }
