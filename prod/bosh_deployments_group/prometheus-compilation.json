@@ -1,0 +1,19 @@
+{
+    "repo_url": "git@github.com:grapeup/gu_release_compilator.git",
+    "repo_version": "master",
+    "repo_private_key_var_name": "git_private_key",
+
+    "pipelines": [
+        {
+            "name": "compile_prometheus",
+            "file": "ci/pipelines/compile_pipeline.yml",
+            "vars": [
+                {"name":"release_compilator_version", "value":"master"},
+                {"name":"release_compilator_repo_private_key", "team_var":"git_private_key"}
+            ]
+        }
+    ],
+
+    "vars": [
+    ]
+}
