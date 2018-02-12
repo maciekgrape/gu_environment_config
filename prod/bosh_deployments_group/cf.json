@@ -15,7 +15,7 @@
             "name": "backup_cf",
             "file": "ci/pipelines/backup_pipeline.yml",
             "vars": [
-                {"name": "backup_interval", "value": "2d"}
+                {"name": "backup_interval", "value": "48h"}
             ]
         },
         {

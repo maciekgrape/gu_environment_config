@@ -27,8 +27,5 @@
                 {"name":"release_compilator_repo_private_key", "team_var":"git_private_key"}
             ]
         }
-    ],
-
-    "vars": [
     ]
 }
