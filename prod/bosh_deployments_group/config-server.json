@@ -6,7 +6,7 @@
     "pipelines": [
         {
             "name": "deploy_config_server",
-            "file": "ci/pipelines/deploy_config_server.yml",
+            "file": "ci/pipelines/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
