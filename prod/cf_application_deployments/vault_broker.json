@@ -11,9 +11,9 @@
                 {"name":"trigger_on_repo_change", "value": "false"},
                 {"name":"vault_address", "team_var":"vault_address"},
                 {"name":"vault_token", "team_var":"vault_token"},
-                {"name":"cf_api", "var":"https://api.prod.cflab.grapeup.com"},
-                {"name":"cf_username", "var":"admin"},
-                {"name":"cf_password", "var":"qlQWqgfozaGTxAMVmcT98E9MN4mdWZ"}
+                {"name":"cf_api", "value":"https://api.prod.cflab.grapeup.com"},
+                {"name":"cf_username", "value":"admin"},
+                {"name":"cf_password", "value":"qlQWqgfozaGTxAMVmcT98E9MN4mdWZ"}
             ]
         }
     ],
