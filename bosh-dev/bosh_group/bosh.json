@@ -5,7 +5,7 @@
 
     "pipelines": [
         {
-            "name": "deploy_and_test_bosh",
+            "name": "deploy_and_test_bosh_2",
             "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "true"}
