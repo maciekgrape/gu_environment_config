@@ -1,0 +1,26 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_docker_images.git",
+  "repo_version": "master",
+  "repo_private_key_var_name": "git_private_key",
+
+  "pipelines": [
+    {
+      "name": "create_infrastructure_docker_image",
+      "file": "ci/pipelines/build_and_upload.yml",
+      "vars": [
+        {
+          "name": "trigger_on_repo_change",
+          "value": "false"
+        },
+        {
+          "name": "docker_username",
+          "value": "grapeupci"
+        },
+        {
+          "name": "docker_password",
+          "value": "0Sough_kane4_pray"
+        }
+      ]
+    }
+  ]
+}
