@@ -19,6 +19,10 @@
         {
           "name": "docker_password",
           "value": "0Sough_kane4_pray"
+        },
+        {
+          "name": "docker_image_name",
+          "value": "infrastructure"
         }
       ]
     }
