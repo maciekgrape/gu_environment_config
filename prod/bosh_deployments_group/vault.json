@@ -1,11 +1,11 @@
 {
-    "repo_url": "git@github.com:grapeup/gu_config_server_deployment.git",
+    "repo_url": "git@github.com:grapeup/gu_vault_deployment.git",
     "repo_version": "master",
     "repo_private_key_var_name": "git_private_key",
 
     "pipelines": [
         {
-            "name": "deploy_config_server",
+            "name": "deploy_vault",
             "file": "ci/pipelines/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
