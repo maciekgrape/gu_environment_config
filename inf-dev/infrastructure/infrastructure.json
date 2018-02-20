@@ -5,7 +5,7 @@
 
     "pipelines": [
         {
-            "name": "deploy_infrastructure_dev",
+            "name": "infrastructure_dev",
             "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
