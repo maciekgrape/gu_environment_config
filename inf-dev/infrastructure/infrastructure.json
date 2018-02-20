@@ -5,15 +5,11 @@
 
     "pipelines": [
         {
-            "name": "deploy_infrastructure",
-            "file": "ci/pipelines/deploy_pipeline.yml",
+            "name": "deploy_infrastructure_dev",
+            "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
-        },
-        {
-            "name": "release_major",
-            "file": "ci/pipelines/release_pipeline.yml"
         },
         {
             "name": "destroy_env",
