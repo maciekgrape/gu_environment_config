@@ -12,6 +12,10 @@
             ]
         },
         {
+            "name": "release_major",
+            "file": "ci/pipelines/release_pipeline.yml"
+        },
+        {
             "name": "destroy_env",
             "file": "ci/pipelines/destroy_pipeline.yml"
         }
