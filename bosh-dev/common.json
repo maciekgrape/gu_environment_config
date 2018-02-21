@@ -23,7 +23,7 @@
 
     {"name": "bosh_instance_ip", "value": "10.92.1.6"},
 
-    {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},
+    {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "versions_s3_access_key", "fortress_var": "aws_access_key"},
