@@ -9,17 +9,17 @@
     {"name": "terraform_state_aws_secret_key", "fortress_var": "aws_secret_key"},
     {"name": "terraform_state_aws_region", "value": "eu-west-2"},
     {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
-    {"name": "terraform_state_filename", "value": "bosh-deployments-dev.tfstate"},
+    {"name": "terraform_state_filename", "value": "deployments-dev.tfstate"},
 
     {"name": "bosh_state_s3_access_key", "fortress_var": "aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "fortress_var": "aws_secret_key"},
     {"name": "bosh_state_s3_region", "fortress_var": "aws_region"},
-    {"name": "bosh_state_bucket_name", "value": "bosh-state.bosh-deployments-dev.cflab.grapeup.com"},
-    {"name": "bosh_state_filename", "value": "bosh-deployments-dev.tar"},
+    {"name": "bosh_state_bucket_name", "value": "bosh-state.deployments-dev.cflab.grapeup.com"},
+    {"name": "bosh_state_filename", "value": "deployments-dev.tar"},
 
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
-    {"name": "system_domain", "value": "bosh-deployments-dev.cflab.grapeup.com"},
+    {"name": "system_domain", "value": "deployments-dev.cflab.grapeup.com"},
 
     {"name": "bosh_instance_ip", "value": "10.93.1.6"},
 
