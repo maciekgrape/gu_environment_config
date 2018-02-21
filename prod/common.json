@@ -23,6 +23,6 @@
 
     {"name": "bosh_instance_ip", "value": "10.90.1.6"},
 
-    {"name": "bosh_releases_bucket", "value": "bosh-releases.devops.cflab.grapeup.com"},
+    {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"}
 ]
