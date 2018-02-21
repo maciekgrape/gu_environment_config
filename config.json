@@ -31,9 +31,9 @@
             }
         },
         {
-            "name": "bosh-deployments-dev",
+            "name": "deployments-dev",
             "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
-            "config_repo_branch": "bosh-deployments-dev",
+            "config_repo_branch": "deployments-dev",
             "auth": {
                 "github_orgs": [
                     {"name": "grapeup"}
