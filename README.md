@@ -1,1 +1,0 @@
-This repository has pipelines configurations for several environments. Each env is configured on separate branch.
