@@ -11,8 +11,6 @@
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
         }
-    ],
-
-    "vars": [
     ]
 }
+
