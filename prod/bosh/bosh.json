@@ -1,0 +1,56 @@
+{
+    "repo_url": "git@github.com:grapeup/gu_bosh_deployment.git",
+    "repo_version": "0.0.1",
+    "repo_private_key_var_name": "git_private_key",
+
+    "pipelines": [
+        {
+            "name": "deploy_bosh",
+            "file": "ci/pipelines/deploy_pipeline.yml",
+            "vars": [
+                {"name": "trigger_on_repo_change", "value": "false"}
+            ]
+        },
+        {
+            "name": "backup_bosh",
+            "file": "ci/pipelines/backup_pipeline.yml",
+            "vars": [
+                {"name": "backup_interval", "value": "48h"}
+            ]
+        },
+        {
+            "name": "restore_bosh",
+            "file": "ci/pipelines/restore_pipeline.yml",
+            "vars": []
+        }
+    ],
+
+    "vars": [
+        {"name": "bosh_backup_bucket_name", "value": "backups.devops.cflab.grapeup.com"},
+        {"name": "bosh_backup_bucket_region", "value": "eu-central-1"},
+        {"name": "bosh_backup_s3_access_key", "fortress_var": "aws_access_key"},
+        {"name": "bosh_backup_s3_secret_key", "fortress_var": "aws_secret_key"},
+
+        {"name": "bosh_gateway_ip", "value": "10.90.1.1"},
+        {"name": "bosh_private_key", "fortress_var": "bosh_private_key"},
+        {"name": "bosh_reserved_ips", "value": "10.90.1.2-10.90.1.3"},
+
+        {"name": "cf_01_gateway_ip", "value": "10.90.16.1"},
+        {"name": "cf_01_reserved_ips", "value": "10.90.16.2-10.90.16.3"},
+
+        {"name": "cf_02_gateway_ip", "value": "10.90.32.1"},
+        {"name": "cf_02_reserved_ips", "value": "10.90.32.2-10.90.32.3"},
+
+        {"name": "dmz_01_gateway_ip", "value": "10.90.2.1"},
+        {"name": "dmz_01_reserved_ips", "value": "10.90.2.2-10.90.2.3"},
+
+        {"name": "dmz_02_gateway_ip", "value": "10.90.3.1"},
+        {"name": "dmz_02_reserved_ips", "value": "10.90.3.2-10.90.3.3"},
+
+        {"name": "tools_01_gateway_ip", "value": "10.90.10.1"},
+        {"name": "tools_01_reserved_ips", "value": "10.90.10.2-10.90.10.3"},
+
+        {"name": "tools_02_gateway_ip", "value": "10.90.11.1"},
+        {"name": "tools_02_reserved_ips", "value": "10.90.11.2-10.90.11.3"}
+    ]
+}
