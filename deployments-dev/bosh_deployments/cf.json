@@ -5,8 +5,8 @@
 
     "pipelines": [
         {
-            "name": "deploy_cf",
-            "file": "ci/pipelines/deploy_pipeline.yml",
+            "name": "cf_dev",
+            "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
