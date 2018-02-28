@@ -8,7 +8,8 @@
             "name": "deploy_concourse",
             "file": "ci/pipelines/deploy_pipeline.yml",
             "vars": [
-                {"name": "trigger_on_repo_change", "value": "false"}
+                {"name": "trigger_on_repo_change", "value": "false"},
+                {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.0.tgz"}
             ]
         },
         {

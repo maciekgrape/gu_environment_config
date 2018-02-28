@@ -8,7 +8,8 @@
             "name": "cf_dev",
             "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
-                {"name": "trigger_on_repo_change", "value": "false"}
+                {"name": "trigger_on_repo_change", "value": "false"},
+                {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
             ]
         }
     ],
