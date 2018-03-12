@@ -6,7 +6,7 @@
     "pipelines": [
         {
             "name": "bosh_dev",
-            "file": "bosh_deployment/ci/pipelines/deploy_pipeline.yml",
+            "file": "bosh_deployment/ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
