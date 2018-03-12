@@ -1,6 +1,6 @@
 {
-    "repo_url": "git@github.com:grapeup/gu_infrastructure_deployment.git",
-    "repo_version": "0.0.1",
+    "repo_url": "git@github.com:grapeup/gu_cf_infrastructure_aws_deployment.git",
+    "repo_version": "master",
     "repo_private_key_var_name": "git_private_key",
 
     "pipelines": [
