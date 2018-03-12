@@ -1,12 +1,12 @@
 {
-    "repo_url": "git@github.com:grapeup/gu_bosh_deployment.git",
+    "repo_url": "git@github.com:grapeup/gu_cf_infrastructure_aws_deployment.git",
     "repo_version": "master",
     "repo_private_key_var_name": "git_private_key",
 
     "pipelines": [
         {
             "name": "bosh_dev",
-            "file": "ci/pipelines/dev_pipeline.yml",
+            "file": "bosh_deployment/ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
