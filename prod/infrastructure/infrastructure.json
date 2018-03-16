@@ -22,7 +22,7 @@
             "name": "restore_bosh",
             "file": "ci/pipelines/restore_pipeline.yml",
             "vars": []
-        }
+        },
         {
             "name": "destroy_env",
             "file": "ci/pipelines/destroy_pipeline.yml",
