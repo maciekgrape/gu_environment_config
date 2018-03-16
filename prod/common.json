@@ -24,5 +24,14 @@
     {"name": "bosh_instance_ip", "value": "10.90.1.6"},
 
     {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
-    {"name": "bosh_releases_bucket_region", "value": "eu-central-1"}
+    {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
+
+    {"name": "versions_s3_access_key", "fortress_var": "aws_access_key"},
+    {"name": "versions_s3_secret_key", "fortress_var": "aws_secret_key"},
+    {"name": "versions_s3_region", "fortress_var": "aws_region"},
+    {"name": "versions_bucket_name", "value": "versions.cflab.grapeup.com"},
+
+    {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
+    {"name": "concourse_utils_version", "value": "master"},
+    {"name": "concourse_utils_repo_private_key", "team_var": "git_private_key"}
 ]
