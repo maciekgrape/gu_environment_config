@@ -1,4 +1,54 @@
 {
     "envs": [
+         {
+            "name": "devops",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "master",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
+        },
+        {
+            "name": "inf-dev",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "master",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
+        },
+        {
+            "name": "bosh-dev",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "master",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
+        },
+        {
+            "name": "deployments-dev",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "master",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
+        },
+        {
+            "name": "prod",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "master",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
+        }
     ]
 }
