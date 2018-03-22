@@ -9,7 +9,7 @@
             "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"},
-                {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.0.tgz"}
+                {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
             ]
         },
         {
