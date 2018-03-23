@@ -4,35 +4,16 @@
     "repo_private_key_var_name": "git_private_key",
 
     "pipelines": [
-        {
-            "name": "bosh_dev",
-            "file": "ci/pipelines/dev_pipeline.yml",
-            "vars": [
-                {"name": "trigger_on_repo_change", "value": "false"}
-            ]
-        },
-        {
-            "name": "destroy_env",
-            "file": "ci/pipelines/destroy_pipeline.yml"
-        },
       {
-        "name": "deploy_bosh",
-        "file": "ci/pipelines/deploy_pipeline.yml",
-        "vars": [
-          {"name": "trigger_on_repo_change", "value": "false"}
-        ]
+          "name": "bosh_dev",
+          "file": "ci/pipelines/dev_pipeline.yml",
+          "vars": [
+              {"name": "trigger_on_repo_change", "value": "false"}
+          ]
       },
       {
-        "name": "backup_bosh",
-        "file": "ci/pipelines/backup_pipeline.yml",
-        "vars": [
-          {"name": "backup_interval", "value": "48h"}
-        ]
-      },
-      {
-        "name": "restore_bosh",
-        "file": "ci/pipelines/restore_pipeline.yml",
-        "vars": []
+          "name": "destroy_env",
+          "file": "ci/pipelines/destroy_pipeline.yml"
       }
     ],
 
