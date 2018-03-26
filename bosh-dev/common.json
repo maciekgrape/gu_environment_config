@@ -11,9 +11,9 @@
     {"name": "terraform_state_bucket_name", "value": "terraform-state.cflab.grapeup.com"},
     {"name": "terraform_state_filename", "value": "bosh-dev.tfstate"},
 
-    {"name": "bosh_state_s3_access_key", "fortress_var": "aws_access_key"},
-    {"name": "bosh_state_s3_secret_key", "fortress_var": "aws_secret_key"},
-    {"name": "bosh_state_s3_region", "fortress_var": "aws_region"},
+    {"name": "bosh_state_s3_access_key", "fortress_var": "bosh_state_s3_access_key"},
+    {"name": "bosh_state_s3_secret_key", "fortress_var": "bosh_state_s3_secret_key"},
+    {"name": "bosh_state_s3_region", "fortress_var": "bosh_state_s3_region"},
     {"name": "bosh_state_bucket_name", "value": "bosh-state.bosh-dev.cflab.grapeup.com"},
     {"name": "bosh_state_filename", "value": "bosh-dev.tar"},
 
@@ -23,13 +23,15 @@
 
     {"name": "bosh_instance_ip", "value": "10.92.1.6"},
 
-    {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
-    {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
+    {"name": "bosh_releases_bucket_name", "value": "bosh-releases.cflab.grapeup.com"},
+    {"name": "bosh_releases_s3_access_key", "value": "bosh_releases_s3_access_key"},
+    {"name": "bosh_releases_s3_access_key", "value": "bosh_releases_s3_access_key"},
+    {"name": "bosh_releases_s3_region", "value": "bosh_releases_s3_region"},
 
-    {"name": "versions_s3_access_key", "fortress_var": "aws_access_key"},
-    {"name": "versions_s3_secret_key", "fortress_var": "aws_secret_key"},
-    {"name": "versions_s3_region", "fortress_var": "aws_region"},
     {"name": "versions_bucket_name", "value": "versions.cflab.grapeup.com"},
+    {"name": "versions_s3_access_key", "fortress_var": "versions_s3_access_key"},
+    {"name": "versions_s3_secret_key", "fortress_var": "versions_s3_secret_key"},
+    {"name": "versions_s3_region", "fortress_var": "versions_s3_region"},
 
     {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
     {"name": "concourse_utils_version", "value": "master"},
