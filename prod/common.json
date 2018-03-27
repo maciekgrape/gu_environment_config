@@ -20,6 +20,10 @@
     {"name": "versions_bucket_name", "fortress_var": "versions_bucket_name"},
     {"name": "bosh_releases_bucket_name", "value": "bosh-releases.cflab.grapeup.com"},
 
+    {"name": "ssl_certs_bucket_name", "value": "keys.cflab.grapeup.com"},
+    {"name": "concourse_cert_filename", "value": "concourse.pfx"},
+    {"name": "cf_router_cert_filename", "value": "cf_router.pfx"},
+
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
     {"name": "system_domain", "value": "prod.azure.cflab.grapeup.com"},
