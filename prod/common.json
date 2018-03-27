@@ -3,7 +3,7 @@
     {"name": "s3_secret_key", "fortress_var": "s3_secret_key"},
     {"name": "s3_region", "fortress_var": "s3_region"},
 
-    {"name": "terraform_state_bucket_name", "value": "terraform-state.azure.cflab.grapeup.com"},
+    {"name": "terraform_state_bucket_name", "value": "terraform-state.devops.azure.cflab.grapeup.com"},
     {"name": "terraform_state_filename", "value": "prod.tfstate"},
 
     {"name": "bosh_state_bucket_name", "value": "bosh-state.prod.azure.cflab.grapeup.com"},
