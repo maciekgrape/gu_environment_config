@@ -1,4 +1,12 @@
 [
+    {"name": "network_name", "value": "prod"},
+    {"name": "network_location", "value": "North Europe"},
+
+    {"name": "azure_subscription_id", "fortress_var": "azure_subscription_id"},
+    {"name": "azure_tenant_id", "fortress_var": "azure_tenant_id"},
+    {"name": "azure_client_id", "fortress_var": "azure_client_id"},
+    {"name": "azure_client_secret", "fortress_var": "azure_client_secret"},
+
     {"name": "s3_access_key", "fortress_var": "s3_access_key"},
     {"name": "s3_secret_key", "fortress_var": "s3_secret_key"},
     {"name": "s3_region", "fortress_var": "s3_region"},
