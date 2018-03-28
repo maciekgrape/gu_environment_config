@@ -14,7 +14,7 @@
     {"name": "bosh_state_s3_access_key", "fortress_var": "aws_access_key"},
     {"name": "bosh_state_s3_secret_key", "fortress_var": "aws_secret_key"},
     {"name": "bosh_state_s3_region", "fortress_var": "aws_region"},
-    {"name": "bosh_state_bucket_name", "value": "bosh-state.state.cflab.grapeup.com"},
+    {"name": "bosh_state_bucket_name", "value": "bosh-state.test.cflab.grapeup.com"},
     {"name": "bosh_state_filename", "value": "prod.tar"},
 
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
@@ -23,7 +23,7 @@
 
     {"name": "bosh_instance_ip", "value": "10.90.1.6"},
 
-    {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
+    {"name": "bosh_releases_bucket", "value": "test-bosh-releases.cflab.grapeup.com"},
     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "versions_s3_access_key", "fortress_var": "aws_access_key"},
