@@ -19,7 +19,7 @@
 
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
-    {"name": "system_domain", "value": "prod.cflab.grapeup.com"},
+    {"name": "system_domain", "value": "prod-test.cflab.grapeup.com"},
 
     {"name": "bosh_instance_ip", "value": "10.90.1.6"},
 
