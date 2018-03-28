@@ -1,5 +1,4 @@
 [
-    {"name": "network_name", "value": "prod"},
     {"name": "network_location", "value": "North Europe"},
 
     {"name": "azure_subscription_id", "fortress_var": "azure_subscription_id"},
@@ -29,6 +28,7 @@
     {"name": "system_domain", "value": "prod.azure.cflab.grapeup.com"},
 
     {"name": "bosh_ip", "value": "10.90.1.6"},
+    {"name": "bosh_vm_size": "value": "Standard_A2_v2"},
 
     {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
     {"name": "concourse_utils_version", "value": "master"},
