@@ -19,6 +19,8 @@
     {"name": "versions_bucket_name", "fortress_var": "versions_bucket_name"},
 
     {"name": "bosh_releases_bucket_name", "value": "bosh-releases.cflab.grapeup.com"},
+    {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
+    
     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "ssl_certs_bucket_name", "value": "keys.cflab.grapeup.com"},
