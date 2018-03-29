@@ -20,7 +20,7 @@
 
     {"name": "bosh_releases_bucket_name", "value": "bosh-releases.cflab.grapeup.com"},
     {"name": "bosh_releases_bucket", "value": "bosh-releases.cflab.grapeup.com"},
-    
+
     {"name": "bosh_releases_bucket_region", "value": "eu-central-1"},
 
     {"name": "ssl_certs_bucket_name", "value": "keys.cflab.grapeup.com"},
@@ -62,7 +62,7 @@
 
     {"name": "terraform_state_aws_access_key", "fortress_var": "s3_access_key"},
     {"name": "terraform_state_aws_secret_key", "fortress_var": "s3_secret_key"},
-    {"name": "terraform_state_aws_region", "value": "eu-s3_region-1"}
+    {"name": "terraform_state_aws_region", "fortress_var": "s3_region"}
 
 
 ]
