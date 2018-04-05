@@ -48,6 +48,8 @@
 
     {"name": "terraform_state_aws_access_key", "fortress_var": "s3_access_key"},
     {"name": "terraform_state_aws_secret_key", "fortress_var": "s3_secret_key"},
-    {"name": "terraform_state_aws_region", "fortress_var": "s3_region"}
+    {"name": "terraform_state_aws_region", "fortress_var": "s3_region"},
+
+    {"name": "dns_instance_public_ip", "value": "40.69.194.40"}
 ]
 
