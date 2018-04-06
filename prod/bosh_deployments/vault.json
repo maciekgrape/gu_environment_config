@@ -10,6 +10,13 @@
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"}
       ]
+    },
+    {
+      "name": "vault_dev",
+      "file": "ci/pipelines/dev_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"}
+      ]
     }
   ]
 }
