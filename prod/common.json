@@ -1,4 +1,6 @@
 [
+    {"name": "backend", "value": "azure"},
+
     {"name": "network_location", "value": "North Europe"},
 
     {"name": "azure_subscription_id", "fortress_var": "azure_subscription_id"},
@@ -38,20 +40,6 @@
     {"name": "concourse_utils_version", "value": "master"},
     {"name": "concourse_utils_repo_private_key", "team_var": "git_private_key"},
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {"name": "aws_access_key", "fortress_var": "s3_access_key"},
     {"name": "aws_secret_key", "fortress_var": "s3_secret_key"},
     {"name": "aws_region", "fortress_var": "s3_region"},
@@ -63,7 +51,5 @@
     {"name": "terraform_state_aws_access_key", "fortress_var": "s3_access_key"},
     {"name": "terraform_state_aws_secret_key", "fortress_var": "s3_secret_key"},
     {"name": "terraform_state_aws_region", "fortress_var": "s3_region"}
-
-
 ]
 
