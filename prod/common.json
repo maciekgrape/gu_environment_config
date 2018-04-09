@@ -1,4 +1,6 @@
 [
+     {"name": "backend", "value": "aws"},
+    
     {"name": "aws_access_key", "fortress_var": "aws_access_key"},
     {"name": "aws_secret_key", "fortress_var": "aws_secret_key"},
     {"name": "aws_region", "value": "eu-central-1"},
