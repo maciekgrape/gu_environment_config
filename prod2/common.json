@@ -1,0 +1,66 @@
+[
+    {"name": "backend", "value": "azure"},
+
+    {"name": "network_location", "value": "North Europe"},
+
+    {"name": "azure_subscription_id", "fortress_var": "azure_subscription_id"},
+    {"name": "azure_tenant_id", "fortress_var": "azure_tenant_id"},
+    {"name": "azure_client_id", "fortress_var": "azure_client_id"},
+    {"name": "azure_client_secret", "fortress_var": "azure_client_secret"},
+
+    {"name": "s3_access_key", "fortress_var": "s3_access_key"},
+    {"name": "s3_secret_key", "fortress_var": "s3_secret_key"},
+    {"name": "s3_region", "fortress_var": "s3_region"},
+
+    {"name": "terraform_state_filename", "value": "prod2.tfstate"},
+    {"name": "bosh_state_filename", "value": "prod2.tar"},
+    {"name": "concourse_cert_filename", "value": "concourse.pfx"},
+    {"name": "cf_router_cert_filename", "value": "cf_router.pfx"},
+
+    {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
+
+    {"name": "system_domain", "value": "prod2.azure.cflab.grapeup.com"},
+
+    {"name": "bosh_ip", "value": "10.91.1.6"},
+    {"name": "bosh_vm_size", "value": "Standard_A2_v2"},
+
+    {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
+    {"name": "concourse_utils_version", "value": "master"},
+    {"name": "concourse_utils_repo_private_key", "team_var": "git_private_key"},
+    
+    {"name": "aws_access_key", "fortress_var": "s3_access_key"},
+    {"name": "aws_secret_key", "fortress_var": "s3_secret_key"},
+    {"name": "aws_region", "fortress_var": "s3_region"},
+
+    {"name": "bosh_state_s3_access_key", "fortress_var": "s3_access_key"},
+    {"name": "bosh_state_s3_secret_key", "fortress_var": "s3_secret_key"},
+    {"name": "bosh_state_s3_region", "fortress_var": "s3_region"},
+
+    {"name": "terraform_state_aws_access_key", "fortress_var": "s3_access_key"},
+    {"name": "terraform_state_aws_secret_key", "fortress_var": "s3_secret_key"},
+    {"name": "terraform_state_aws_region", "fortress_var": "s3_region"},
+
+    {"name": "fortress_domain", "value": "devops.azure.cflab.grapeup.com"},
+    {"name": "fortress_dns", "value": "40.90.4.4"},
+
+
+    {"name": "terraform_state_storage_account", "value": "grapeupblobstorage"},
+    {"name": "terraform_state_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "terraform_state_container_name", "value": "terraform-states"},
+
+    {"name": "bosh_state_storage_account", "value": "grapeupblobstorage"},
+    {"name": "bosh_state_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_state_container_name", "value": "bosh-state-prod2"},
+
+    {"name": "bosh_backup_storage_account", "value": "grapeupblobstorage"},
+    {"name": "bosh_backup_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_backup_container_name", "value": "backups"},
+
+    {"name": "bosh_releases_storage_account", "value": "grapeupblobstorage"},
+    {"name": "bosh_releases_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_releases_container_name", "value": "bosh-releases"},
+
+    {"name": "ssl_certs_storage_account", "value": "grapeupblobstorage"},
+    {"name": "ssl_certs_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "ssl_certs_container_name", "value": "sensitive-data"}
+]
