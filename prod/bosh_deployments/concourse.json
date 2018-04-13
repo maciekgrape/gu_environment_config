@@ -6,7 +6,7 @@
   "pipelines": [
     {
       "name": "deploy_concourse",
-      "file": "ci/pipelines/deploy_pipeline.yml",
+      "file": "ci/pipelines/azure/deploy_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
@@ -14,19 +14,19 @@
     },
     {
       "name": "backup_concourse",
-      "file": "ci/pipelines/backup_pipeline.yml",
+      "file": "ci/pipelines/azure/backup_pipeline.yml",
       "vars": [
         {"name": "backup_interval", "value": "48h"}
       ]
     },
     {
       "name": "restore_concourse",
-      "file": "ci/pipelines/restore_pipeline.yml",
+      "file": "ci/pipelines/azure/restore_pipeline.yml",
       "vars": []
     },
     {
       "name": "concourse_dev",
-      "file": "ci/pipelines/dev_pipeline.yml",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
