@@ -35,11 +35,8 @@
   ],
 
   "vars": [
-    {"name": "backend", "value": "azure"},
-    {"name": "concourse_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
-
-    {"name": "concourse_backup_bucket_region", "fortress_var": "s3_region"},
-    {"name": "concourse_backup_s3_access_key", "fortress_var": "s3_access_key"},
-    {"name": "concourse_backup_s3_secret_key", "fortress_var": "s3_secret_key"}
+    {"name": "backups_container_name", "value": "test-container"},
+    {"name": "backups_storage_account_name", "value": "grapeupmatrteststorage"},
+    {"name": "backups_storage_account_key", "value": "3B4s5cdL9FV3UPIFTZKR6ULFBMQ4S3Kok+EV5piaQx+70cFQOo1EArnXPID8lqOBR6PL3pPRIcY/Tw4ljnI6DQ=="}
   ]
 }
