@@ -44,23 +44,23 @@
     {"name": "fortress_dns", "value": "40.90.4.4"},
 
 
-    {"name": "terraform_state_storage_account", "value": "grapeupblobstorage"},
-    {"name": "terraform_state_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "terraform_state_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "terraform_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "terraform_state_container_name", "value": "terraform-states"},
 
-    {"name": "bosh_state_storage_account", "value": "grapeupblobstorage"},
-    {"name": "bosh_state_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_state_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "bosh_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_state_container_name", "value": "bosh-state-prod2"},
 
-    {"name": "bosh_backup_storage_account", "value": "grapeupblobstorage"},
-    {"name": "bosh_backup_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_backup_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "bosh_backup_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_backup_container_name", "value": "backups"},
 
-    {"name": "bosh_releases_storage_account", "value": "grapeupblobstorage"},
-    {"name": "bosh_releases_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "bosh_releases_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_releases_container_name", "value": "bosh-releases"},
 
-    {"name": "ssl_certs_storage_account", "value": "grapeupblobstorage"},
-    {"name": "ssl_certs_storage_access_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "ssl_certs_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "ssl_certs_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "ssl_certs_container_name", "value": "sensitive-data"}
 ]
