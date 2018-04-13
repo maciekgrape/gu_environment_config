@@ -11,7 +11,7 @@
             }
         },
         {
-            "name": "dev",
+            "name": "prod2",
             "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
             "config_repo_branch": "azure",
             "auth": {
