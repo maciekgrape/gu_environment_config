@@ -6,7 +6,7 @@
     "pipelines": [
         {
             "name": "deploy_concourse",
-            "file": "ci/pipelines/deploy_pipeline.yml",
+            "file": "ci/pipelines/aws/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"},
                 {"name": "concourse_bbr_release_filename", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
@@ -14,14 +14,14 @@
         },
         {
             "name": "backup_concourse",
-            "file": "ci/pipelines/backup_pipeline.yml",
+            "file": "ci/pipelines/aws/backup_pipeline.yml",
             "vars": [
                 {"name": "backup_interval", "value": "48h"}
             ]
         },
         {
             "name": "restore_concourse",
-            "file": "ci/pipelines/restore_pipeline.yml",
+            "file": "ci/pipelines/aws/restore_pipeline.yml",
             "vars": []
         }
     ],
