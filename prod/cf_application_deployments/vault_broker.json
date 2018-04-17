@@ -5,7 +5,7 @@
 
   "pipelines": [
     {
-      "name": "deploy_vault_broker",
+      "name": "vault_broker_deploy",
       "file": "ci/pipelines/pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"}
