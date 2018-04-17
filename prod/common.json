@@ -59,12 +59,12 @@
     {"name": "terraform_state_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "terraform_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "terraform_state_container_name", "value": "terraform-states"},
-    {"name": "terraform_state_filename", "value": "prod2.tfstate"},
+    {"name": "terraform_state_filename", "value": "prod.tfstate"},
 
     {"name": "bosh_state_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
-    {"name": "bosh_state_container_name", "value": "bosh-state-prod2"},
-    {"name": "bosh_state_filename", "value": "prod2.tar"},
+    {"name": "bosh_state_container_name", "value": "bosh-state-prod"},
+    {"name": "bosh_state_filename", "value": "prod.tar"},
 
     {"name": "bosh_backup_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_backup_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
