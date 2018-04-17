@@ -8,7 +8,7 @@
       "name": "concourse_deploy",
       "file": "ci/pipelines/azure/deploy_pipeline.yml",
       "vars": [
-        {"name": "trigger_on_repo_change", "value": "false"},
+        {"name": "trigger_on_repo_change", "value": "false"}
       ]
     },
     {
@@ -26,7 +26,7 @@
       "name": "concourse_dev",
       "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
-        {"name": "trigger_on_repo_change", "value": "false"},
+        {"name": "trigger_on_repo_change", "value": "false"}
       ]
     }
   ]
