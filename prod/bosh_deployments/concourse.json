@@ -9,7 +9,6 @@
       "file": "ci/pipelines/azure/deploy_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
-        {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
       ]
     },
     {
@@ -21,22 +20,14 @@
     },
     {
       "name": "restore_concourse",
-      "file": "ci/pipelines/azure/restore_pipeline.yml",
-      "vars": []
+      "file": "ci/pipelines/azure/restore_pipeline.yml"
     },
     {
       "name": "concourse_dev",
       "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
-        {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
       ]
     }
-  ],
-
-  "vars": [
-    {"name": "backups_container_name", "value": "test-container"},
-    {"name": "backups_storage_account_name", "value": "grapeupmatrteststorage"},
-    {"name": "backups_storage_account_key", "value": "3B4s5cdL9FV3UPIFTZKR6ULFBMQ4S3Kok+EV5piaQx+70cFQOo1EArnXPID8lqOBR6PL3pPRIcY/Tw4ljnI6DQ=="}
   ]
 }

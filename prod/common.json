@@ -40,14 +40,16 @@
     {"name": "bosh_state_container_name", "value": "bosh-state-prod"},
     {"name": "bosh_state_filename", "value": "prod.tar"},
 
-    {"name": "bosh_backup_storage_account_name", "value": "grapeupblobstorage"},
-    {"name": "bosh_backup_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
-    {"name": "bosh_backup_container_name", "value": "backups"},
+    {"name": "backups_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "backups_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
+    {"name": "backups_container_name", "value": "backups"},
 
     {"name": "bosh_releases_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_releases_container_name", "value": "bosh-releases"},
-    {"name": "dnsmasq_release_filename", "value": "dnsmasq-1.0.2.tar"},
+    {"name": "dnsmasq_release_filename", "value": "dnsmasq/dnsmasq-1.0.2.tgz"},
+    {"name": "concourse_bbr_release_filename", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"},
+    {"name": "cf_bbr_release_filename", "value": "cf-bbr/cf-bbr-1.0.0.tgz"},
 
     {"name": "ssl_certs_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "ssl_certs_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
