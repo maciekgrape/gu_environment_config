@@ -12,11 +12,6 @@
     {"name": "s3_secret_key", "fortress_var": "s3_secret_key"},
     {"name": "s3_region", "fortress_var": "s3_region"},
 
-    {"name": "terraform_state_filename", "value": "prod2.tfstate"},
-    {"name": "bosh_state_filename", "value": "prod2.tar"},
-    {"name": "concourse_cert_filename", "value": "concourse.pfx"},
-    {"name": "cf_router_cert_filename", "value": "cf_router.pfx"},
-
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
     {"name": "system_domain", "value": "prod2.azure.cflab.grapeup.com"},
@@ -43,14 +38,15 @@
     {"name": "fortress_domain", "value": "devops.azure.cflab.grapeup.com"},
     {"name": "fortress_dns", "value": "40.90.4.4"},
 
-
     {"name": "terraform_state_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "terraform_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "terraform_state_container_name", "value": "terraform-states"},
+    {"name": "terraform_state_filename", "value": "prod2.tfstate"},
 
     {"name": "bosh_state_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_state_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_state_container_name", "value": "bosh-state-prod2"},
+    {"name": "bosh_state_filename", "value": "prod2.tar"},
 
     {"name": "bosh_backup_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_backup_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
@@ -59,8 +55,14 @@
     {"name": "bosh_releases_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_releases_container_name", "value": "bosh-releases"},
+    {"name": "dnsmasq_release_filename", "value": "dnsmasq-1.0.2.tar"},
 
     {"name": "ssl_certs_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "ssl_certs_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
-    {"name": "ssl_certs_container_name", "value": "sensitive-data"}
+    {"name": "ssl_certs_container_name", "value": "sensitive-data"},
+    {"name": "concourse_cert_filename", "value": "concourse.pfx"},
+    {"name": "cf_router_cert_filename", "value": "cf_router.pfx"},
+
+    {"name": "env_storage_account_name", "value": "grapeupblobstorage"},
+    {"name": "env_storage_account_resource_group_name", "value": "ref-arch-static"}
 ]
