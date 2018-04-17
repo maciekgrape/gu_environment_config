@@ -6,7 +6,7 @@
   "pipelines": [
     {
       "name": "deploy_cf",
-      "file": "ci/pipelines/dev_pipeline.yml",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
@@ -14,14 +14,14 @@
     },
     {
       "name": "backup_cf",
-      "file": "ci/pipelines/backup_pipeline.yml",
+      "file": "ci/pipelines/azure/backup_pipeline.yml",
       "vars": [
         {"name": "backup_interval", "value": "48h"}
       ]
     },
     {
       "name": "restore_cf",
-      "file": "ci/pipelines/restore_pipeline.yml",
+      "file": "ci/pipelines/azure/restore_pipeline.yml",
       "vars": []
     }
   ],

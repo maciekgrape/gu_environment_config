@@ -6,7 +6,7 @@
   "pipelines": [
     {
       "name": "deploy_concourse",
-      "file": "ci/pipelines/deploy_pipeline.yml",
+      "file": "ci/pipelines/azure/deploy_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
@@ -14,19 +14,19 @@
     },
     {
       "name": "backup_concourse",
-      "file": "ci/pipelines/backup_pipeline.yml",
+      "file": "ci/pipelines/azure/backup_pipeline.yml",
       "vars": [
         {"name": "backup_interval", "value": "48h"}
       ]
     },
     {
       "name": "restore_concourse",
-      "file": "ci/pipelines/restore_pipeline.yml",
+      "file": "ci/pipelines/azure/restore_pipeline.yml",
       "vars": []
     },
     {
       "name": "concourse_dev",
-      "file": "ci/pipelines/dev_pipeline.yml",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "concourse_bbr_release", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
@@ -35,11 +35,8 @@
   ],
 
   "vars": [
-    {"name": "backend", "value": "azure"},
-    {"name": "concourse_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
-
-    {"name": "concourse_backup_bucket_region", "fortress_var": "s3_region"},
-    {"name": "concourse_backup_s3_access_key", "fortress_var": "s3_access_key"},
-    {"name": "concourse_backup_s3_secret_key", "fortress_var": "s3_secret_key"}
+    {"name": "backups_container_name", "value": "test-container"},
+    {"name": "backups_storage_account_name", "value": "grapeupmatrteststorage"},
+    {"name": "backups_storage_account_key", "value": "3B4s5cdL9FV3UPIFTZKR6ULFBMQ4S3Kok+EV5piaQx+70cFQOo1EArnXPID8lqOBR6PL3pPRIcY/Tw4ljnI6DQ=="}
   ]
 }
