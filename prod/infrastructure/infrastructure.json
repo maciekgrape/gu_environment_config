@@ -5,35 +5,33 @@
 
     "pipelines": [
         {
-            "name": "deploy_bosh",
+            "name": "bosh_deploy",
             "file": "ci/pipelines/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
         },
         {
-            "name": "dev_bosh",
+            "name": "bosh_dev",
             "file": "ci/pipelines/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
         },
         {
-            "name": "backup_bosh",
+            "name": "bosh_backup",
             "file": "ci/pipelines/backup_pipeline.yml",
             "vars": [
                 {"name": "backup_interval", "value": "48h"}
             ]
         },
         {
-            "name": "restore_bosh",
-            "file": "ci/pipelines/restore_pipeline.yml",
-            "vars": []
+            "name": "bosh_restore",
+            "file": "ci/pipelines/restore_pipeline.yml"
         },
         {
-            "name": "destroy_env",
-            "file": "ci/pipelines/destroy_pipeline.yml",
-            "vars": []
+            "name": "env_destroy",
+            "file": "ci/pipelines/destroy_pipeline.yml"
         }
     ],
 
@@ -47,15 +45,10 @@
         {"name": "tools_subnet_cidr", "value": "10.90.10.0/24"},
         {"name": "cf_subnet_cidr", "value": "10.90.16.0/20"},
 
-        {"name": "jumpbox_ami", "fortress_var": "jumpbox_ami"},
         {"name": "jumpbox_public_key", "fortress_var": "jumpbox_public_key"},
         {"name": "jumpbox_git_private_key", "fortress_var": "git_private_key"},
 
         {"name": "git_private_key", "fortress_var": "git_private_key"},
-        {"name": "bosh_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
-        {"name": "bosh_backup_bucket_region", "fortress_var": "s3_region"},
-        {"name": "bosh_backup_s3_access_key", "fortress_var": "s3_access_key"},
-        {"name": "bosh_backup_s3_secret_key", "fortress_var": "s3_secret_key"},
 
         {"name": "bosh_gateway_ip", "value": "10.90.1.1"},
         {"name": "bosh_private_key", "fortress_var": "bosh_private_key"},
@@ -73,11 +66,5 @@
         {"name": "fortress_network_id", "fortress_var": "network_id"},
         {"name": "fortress_network_name", "fortress_var": "network_name"},
         {"name": "fortress_resource_group_name", "fortress_var": "resource_group_name"},
-
-        {"name": "dnsmasq_release", "value": "dnsmasq/dnsmasq-1.0.2.tgz"}
-
-
-
-
     ]
 }
