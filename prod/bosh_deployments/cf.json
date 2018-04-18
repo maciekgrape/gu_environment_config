@@ -29,7 +29,7 @@
         },
         {
             "name": "restore_cf",
-            "file": "ci/pipelines/restore_pipeline.yml",
+            "file": "ci/pipelines/aws/restore_pipeline.yml",
             "vars": []
         }
     ],
