@@ -6,7 +6,7 @@
     "pipelines": [
         {
             "name": "deploy_cf",
-            "file": "ci/pipelines/deploy_pipeline.yml",
+            "file": "ci/pipelines/aws/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"},
                 {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
@@ -14,7 +14,7 @@
         },
         {
             "name": "dev_cf",
-            "file": "ci/pipelines/dev_pipeline.yml",
+            "file": "ci/pipelines/aws/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"},
                 {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
@@ -22,7 +22,7 @@
         },
         {
             "name": "backup_cf",
-            "file": "ci/pipelines/backup_pipeline.yml",
+            "file": "ci/pipelines/aws/backup_pipeline.yml",
             "vars": [
                 {"name": "backup_interval", "value": "48h"}
             ]
@@ -35,9 +35,9 @@
     ],
 
     "vars": [
-        {"name": "cf_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
-        {"name": "cf_backup_bucket_region", "value": "eu-central-1"},
-        {"name": "cf_backup_s3_access_key", "fortress_var": "aws_access_key"},
-        {"name": "cf_backup_s3_secret_key", "fortress_var": "aws_secret_key"}
+        {"name": "backups_bucket_name", "value": "backups.cflab.grapeup.com"},
+        {"name": "backups_s3_region", "value": "eu-central-1"},
+        {"name": "backups_s3_access_key", "fortress_var": "aws_access_key"},
+        {"name": "backups_s3_secret_key", "fortress_var": "aws_secret_key"}
     ]
 }
