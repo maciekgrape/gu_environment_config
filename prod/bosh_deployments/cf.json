@@ -33,12 +33,5 @@
     }
   ],
 
-  "vars": [
-    {"name": "cf_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
-    {"name": "cf_backup_bucket_region", "fortress_var": "s3_region"},
-    {"name": "cf_backup_s3_access_key", "fortress_var": "s3_access_key"},
-    {"name": "cf_backup_s3_secret_key", "fortress_var": "s3_secret_key"},
-    
-    {"name": "backend", "value":"azure"}
-  ]
+  "vars": []
 }
