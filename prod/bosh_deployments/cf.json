@@ -38,6 +38,9 @@
         {"name": "backups_bucket_name", "value": "backups.cflab.grapeup.com"},
         {"name": "backups_s3_region", "value": "eu-central-1"},
         {"name": "backups_s3_access_key", "fortress_var": "aws_access_key"},
-        {"name": "backups_s3_secret_key", "fortress_var": "aws_secret_key"}
+        {"name": "backups_s3_secret_key", "fortress_var": "aws_secret_key"},
+        {"name": "s3_access_key", "fortress_var": "aws_access_key"},
+        {"name": "s3_secret_key", "fortress_var": "aws_secret_key"},
+        {"name": "s3_region", "value": "eu-central-1"}
     ]
 }
