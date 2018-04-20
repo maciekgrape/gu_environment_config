@@ -32,9 +32,9 @@
     {"name": "bosh_state_container_name", "value": "bosh-state-prod"},
     {"name": "bosh_state_filename", "value": "prod.tar"},
 
-    {"name": "backups_storage_account_name", "value": "grapeupblobstorage"},
-    {"name": "backups_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
-    {"name": "backups_container_name", "value": "backups"},
+    {"name": "backups_storage_account_name", "fortress_var": "backups_storage_account_name"},
+    {"name": "backups_storage_account_key", "fortress_var": "backups_storage_access_key"},
+    {"name": "backups_container_name", "fortress_var": "backups_storage_container_name"},
 
     {"name": "bosh_releases_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
