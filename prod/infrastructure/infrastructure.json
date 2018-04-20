@@ -64,6 +64,7 @@
         {"name": "tools_reserved_ips", "value": "10.90.10.2-10.90.10.3"},
 
         {"name": "fortress_network_id", "fortress_var": "network_id"},
+        {"name": "fortress_network_cidr", "fortress_var": "network_cidr"},
         {"name": "fortress_network_name", "fortress_var": "network_name"},
         {"name": "fortress_resource_group_name", "fortress_var": "resource_group_name"}
     ]
