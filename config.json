@@ -29,6 +29,16 @@
                     {"name": "grapeup"}
                 ]
             }
+        },
+        {
+            "name": "test_config",
+            "config_repo_url": "git@github.com:grapeup/gu_environment_config.git",
+            "config_repo_branch": "azure",
+            "auth": {
+                "github_orgs": [
+                    {"name": "grapeup"}
+                ]
+            }
         }
     ]
 }
