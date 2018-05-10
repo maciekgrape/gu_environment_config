@@ -5,14 +5,6 @@
 
     "pipelines": [
         {
-            "name": "deploy_cf",
-            "file": "ci/pipelines/aws/deploy_pipeline.yml",
-            "vars": [
-                {"name": "trigger_on_repo_change", "value": "false"},
-                {"name": "cf_bbr_release_filename", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
-            ]
-        },
-        {
             "name": "dev_cf",
             "file": "ci/pipelines/aws/dev_pipeline.yml",
             "vars": [

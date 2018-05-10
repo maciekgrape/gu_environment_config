@@ -5,8 +5,8 @@
 
     "pipelines": [
         {
-            "name": "deploy_concourse",
-            "file": "ci/pipelines/aws/deploy_pipeline.yml",
+            "name": "dev_concourse",
+            "file": "ci/pipelines/aws/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"},
                 {"name": "concourse_bbr_release_filename", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
