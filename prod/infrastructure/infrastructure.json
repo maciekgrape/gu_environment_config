@@ -24,6 +24,16 @@
             "vars": []
         },
         {
+            "name": "pause_env",
+            "file": "ci/pipelines/pause_pipeline.yml",
+            "vars": []
+        },
+        {
+            "name": "unpause_env",
+            "file": "ci/pipelines/unpause_pipeline.yml",
+            "vars": []
+        },
+        {
             "name": "destroy_env",
             "file": "ci/pipelines/destroy_pipeline.yml",
             "vars": []
