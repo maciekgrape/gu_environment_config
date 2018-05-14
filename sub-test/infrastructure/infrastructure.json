@@ -1,0 +1,49 @@
+{
+    "repo_url": "git@github.com:grapeup/gu_cf_infrastructure_azure_deployment.git",
+    "repo_version": "master",
+    "repo_private_key_var_name": "git_private_key",
+
+    "pipelines": [
+        {
+            "name": "bosh_deploy",
+            "file": "ci/pipelines/deploy_pipeline.yml",
+            "vars": [
+                {"name": "trigger_on_repo_change", "value": "false"}
+            ]
+        }
+    ],
+
+    "vars": [
+        {"name": "bosh_public_key", "fortress_var": "bosh_public_key"},
+
+        {"name": "network_cidr", "value": "10.90.0.0/16"},
+        {"name": "bosh_subnet_cidr", "value": "10.90.1.0/24"},
+        {"name": "dmz_subnet_cidr", "value": "10.90.2.0/24"},
+        {"name": "ops_subnet_cidr", "value": "10.90.0.0/24"},
+        {"name": "tools_subnet_cidr", "value": "10.90.10.0/24"},
+        {"name": "cf_subnet_cidr", "value": "10.90.16.0/20"},
+
+        {"name": "jumpbox_public_key", "fortress_var": "jumpbox_public_key"},
+        {"name": "jumpbox_git_private_key", "fortress_var": "git_private_key"},
+
+        {"name": "git_private_key", "fortress_var": "git_private_key"},
+
+        {"name": "bosh_gateway_ip", "value": "10.90.1.1"},
+        {"name": "bosh_private_key", "fortress_var": "bosh_private_key"},
+        {"name": "bosh_reserved_ips", "value": "10.90.1.2-10.90.1.3"},
+
+        {"name": "cf_gateway_ip", "value": "10.90.16.1"},
+        {"name": "cf_reserved_ips", "value": "10.90.16.2-10.90.16.3"},
+
+        {"name": "dmz_gateway_ip", "value": "10.90.2.1"},
+        {"name": "dmz_reserved_ips", "value": "10.90.2.2-10.90.2.3"},
+
+        {"name": "tools_gateway_ip", "value": "10.90.10.1"},
+        {"name": "tools_reserved_ips", "value": "10.90.10.2-10.90.10.3"},
+
+        {"name": "fortress_network_id", "fortress_var": "network_id"},
+        {"name": "fortress_network_cidr", "fortress_var": "network_cidr"},
+        {"name": "fortress_network_name", "fortress_var": "network_name"},
+        {"name": "fortress_resource_group_name", "fortress_var": "resource_group_name"}
+    ]
+}
