@@ -1,0 +1,33 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_concourse_deployment.git",
+  "repo_version": "master",
+  "repo_private_key_var_name": "git_private_key",
+
+  "pipelines": [
+    {
+      "name": "concourse_deploy",
+      "file": "ci/pipelines/azure/deploy_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"}
+      ]
+    },
+    {
+      "name": "concourse_backup",
+      "file": "ci/pipelines/azure/backup_pipeline.yml",
+      "vars": [
+        {"name": "backup_interval", "value": "48h"}
+      ]
+    },
+    {
+      "name": "concourse_restore",
+      "file": "ci/pipelines/azure/restore_pipeline.yml"
+    },
+    {
+      "name": "concourse_dev",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"}
+      ]
+    }
+  ]
+}

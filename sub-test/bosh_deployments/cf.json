@@ -1,0 +1,29 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_cf_deployment.git",
+  "repo_version": "master",
+  "repo_private_key_var_name": "git_private_key",
+
+  "pipelines": [
+    {
+      "name": "cf_deploy",
+      "file": "ci/pipelines/azure/deploy_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"},
+        {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}
+      ]
+    },
+    {
+      "name": "cf_backup",
+      "file": "ci/pipelines/azure/backup_pipeline.yml",
+      "vars": [
+        {"name": "backup_interval", "value": "48h"}
+      ]
+    },
+    {
+      "name": "cf_restore",
+      "file": "ci/pipelines/azure/restore_pipeline.yml"
+    }
+  ],
+
+  "vars": []
+}
