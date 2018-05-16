@@ -12,6 +12,13 @@
       ]
     },
     {
+      "name": "concourse_dev",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"}
+      ]
+    },
+    {
       "name": "concourse_backup",
       "file": "ci/pipelines/azure/backup_pipeline.yml",
       "vars": [
