@@ -4,9 +4,9 @@
     {"name": "network_location", "value": "North Europe"},
 
     {"name": "azure_subscription_id", "value": "14f2620f-756e-4ae6-a6a3-148e094015bc"},
-    {"name": "azure_tenant_id", "value": "azure_tenant_id"},
-    {"name": "azure_client_id", "value": "azure_client_id"},
-    {"name": "azure_client_secret", "value": "azure_client_secret"},
+    {"name": "azure_tenant_id", "fortress_var": "azure_tenant_id"},
+    {"name": "azure_client_id", "fortress_var": "azure_client_id"},
+    {"name": "azure_client_secret", "fortress_var": "azure_client_secret"},
 
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
