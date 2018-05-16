@@ -4,10 +4,10 @@
     {"name": "network_location", "value": "North Europe"},
 
     {"name": "azure_subscription_id", "value": "14f2620f-756e-4ae6-a6a3-148e094015bc"},
-    {"name": "azure_tenant_id", "fortress_var": "azure_tenant_id"},
-    {"name": "azure_client_id", "fortress_var": "azure_client_id"},
-    {"name": "azure_client_secret", "fortress_var": "azure_client_secret"},
-
+    {"name": "azure_tenant_id", "value": "567bc588-b987-41b3-97fa-b0efe5ac409b"},
+    {"name": "azure_client_id", "value": "1bf9000a-4d76-49a6-b4b5-93df8ce7d907"},
+    {"name": "azure_client_secret", "value": "22cc8c27-1c79-4762-91fc-c7aff2749bf4"},
+    
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
     {"name": "system_domain", "value": "sub-test.azure.cflab.grapeup.com"},
