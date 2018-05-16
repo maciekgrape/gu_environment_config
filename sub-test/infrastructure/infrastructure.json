@@ -10,6 +10,10 @@
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
+        },
+        {
+            "name": "env_destroy",
+            "file": "ci/pipelines/destroy_pipeline.yml"
         }
     ],
 
