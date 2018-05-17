@@ -57,7 +57,7 @@
     {"name": "env_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "env_storage_account_resource_group_name", "value": "ref-arch-static"},
 
-    {"name": "nexus_password", "fortress_var": "nexus_password"},
-    {"name": "nexus_username", "fortress_var": "nexus_username"},
-    {"name": "nexus_url", "fortress_var": "nexus_url"}
+    {"name": "docker_password", "fortress_var": "nexus_password"},
+    {"name": "docker_username", "fortress_var": "nexus_username"},
+    {"name": "docker_url", "fortress_var": "nexus_url"}
 ]
