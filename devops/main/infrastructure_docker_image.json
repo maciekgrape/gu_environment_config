@@ -11,7 +11,7 @@
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "docker_username", "fortress_var": "nexus_username"},
         {"name": "docker_password","fortress_var": "nexus_password"},
-        {"name": "fortress_var","fortress_var": "nexus_url"},
+        {"name": "docker_url","fortress_var": "nexus_url"},
         {"name": "docker_image_name","value": "infrastructure"}
       ]
     }
