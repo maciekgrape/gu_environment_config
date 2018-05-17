@@ -9,8 +9,9 @@
       "file": "ci/pipelines/build_and_upload.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
-        {"name": "docker_username", "team_var": "dockerhub_username"},
-        {"name": "docker_password","team_var": "dockerhub_password"},
+        {"name": "docker_username", "fortress_var": "nexus_username"},
+        {"name": "docker_password","fortress_var": "nexus_password"},
+        {"name": "fortress_var","fortress_var": "nexus_url"},
         {"name": "docker_image_name","value": "infrastructure"}
       ]
     }
