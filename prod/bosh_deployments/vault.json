@@ -5,8 +5,8 @@
 
     "pipelines": [
         {
-            "name": "dev_vault",
-            "file": "ci/pipelines/aws/dev_pipeline.yml",
+            "name": "deploy_vault",
+            "file": "ci/pipelines/aws/deploy_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]

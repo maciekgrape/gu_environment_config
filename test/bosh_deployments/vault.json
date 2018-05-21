@@ -5,12 +5,11 @@
 
     "pipelines": [
         {
-            "name": "vault_dev",
-            "file": "ci/pipelines/dev_pipeline.yml",
+            "name": "dev_vault",
+            "file": "ci/pipelines/aws/dev_pipeline.yml",
             "vars": [
                 {"name": "trigger_on_repo_change", "value": "false"}
             ]
         }
     ]
 }
-
