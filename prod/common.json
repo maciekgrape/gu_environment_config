@@ -44,5 +44,9 @@
 
   {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
   {"name": "concourse_utils_version", "value": "master"},
-  {"name": "concourse_utils_repo_private_key", "team_var": "git_private_key"}
+  {"name": "concourse_utils_repo_private_key", "team_var": "git_private_key"},
+  
+  {"name": "docker_password", "fortress_var": "nexus_password"},
+  {"name": "docker_username", "fortress_var": "nexus_username"},
+  {"name": "docker_url", "fortress_var": "nexus_url"}
 ]
