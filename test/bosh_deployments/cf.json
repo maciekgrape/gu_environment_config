@@ -5,8 +5,8 @@
 
   "pipelines": [
     {
-      "name": "cf_deploy",
-      "file": "ci/pipelines/azure/deploy_pipeline.yml",
+      "name": "cf_dev",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
       "vars": [
         {"name": "trigger_on_repo_change", "value": "false"},
         {"name": "cf_bbr_release", "value": "cf-bbr/cf-bbr-1.0.0.tgz"}

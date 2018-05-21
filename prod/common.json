@@ -50,5 +50,9 @@
     {"name": "cf_router_cert_filename", "value": "cf_router.pfx"},
 
     {"name": "env_storage_account_name", "value": "grapeupblobstorage"},
-    {"name": "env_storage_account_resource_group_name", "value": "ref-arch-static"}
+    {"name": "env_storage_account_resource_group_name", "value": "ref-arch-static"},
+
+    {"name": "docker_password", "fortress_var": "nexus_password"},
+    {"name": "docker_username", "fortress_var": "nexus_username"},
+    {"name": "docker_url", "fortress_var": "nexus_url"}
 ]
