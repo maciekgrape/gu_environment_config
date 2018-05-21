@@ -12,13 +12,6 @@
             ]
         },
         {
-            "name": "bosh_dev",
-            "file": "ci/pipelines/dev_pipeline.yml",
-            "vars": [
-                {"name": "trigger_on_repo_change", "value": "false"}
-            ]
-        },
-        {
             "name": "bosh_backup",
             "file": "ci/pipelines/backup_pipeline.yml",
             "vars": [

@@ -12,7 +12,7 @@
 
     {"name": "system_domain", "value": "test.azure.cflab.grapeup.com"},
 
-    {"name": "bosh_ip", "value": "10.99.1.6"},
+    {"name": "bosh_ip", "value": "10.91.1.6"},
     {"name": "bosh_vm_size", "value": "Standard_A2_v2"},
 
     {"name": "concourse_utils_repo_url", "value": "git@github.com:grapeup/gu_concourse_utils.git"},
@@ -32,9 +32,9 @@
     {"name": "bosh_state_container_name", "value": "bosh-state-test"},
     {"name": "bosh_state_filename", "value": "test.tar"},
 
-    {"name": "backups_storage_account_name", "value": "grapeupblobstorage"},
-    {"name": "backups_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
-    {"name": "backups_container_name", "value": "backups"},
+    {"name": "backups_storage_account_name", "fortress_var": "backups_storage_account_name"},
+    {"name": "backups_storage_account_key", "fortress_var": "backups_storage_access_key"},
+    {"name": "backups_container_name", "fortress_var": "backups_storage_container_name"},
 
     {"name": "bosh_releases_storage_account_name", "value": "grapeupblobstorage"},
     {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
