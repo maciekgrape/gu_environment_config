@@ -45,7 +45,7 @@
     {"name": "bosh_releases_storage_account_key", "value": "hImGLTBtXJmLEF+PyQ61ym7pEkBOuDDhOBKTac4jZgDsToDL7pEHOPpgV80Xm0tLXGPYvQgxf9w/0+rPVcJVmQ=="},
     {"name": "bosh_releases_container_name", "value": "bosh-releases"},
     {"name": "dnsmasq_release_filename", "value": "dnsmasq-1.0.2.tgz"},
-    {"name": "concourse_bbr_release_filename", "value": "concourse-bbr-1.0.2.tgz"},
+    {"name": "concourse_bbr_release_filename", "value": "concourse-bbr-1.0.1.tgz"},
     {"name": "cf_bbr_release_filename", "value": "cf-bbr-1.0.0.tgz"},
 
     {"name": "ssl_certs_storage_account_name", "value": "grapeupblobstorage"},
