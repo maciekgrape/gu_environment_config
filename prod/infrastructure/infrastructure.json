@@ -46,8 +46,8 @@
         {"name": "cf_01_subnet_cidr", "value": "10.90.16.0/20"},
         {"name": "cf_02_subnet_cidr", "value": "10.90.32.0/20"},
 
-        {"name": "cf_certificate_arn", "fortress_var": "cf_certificate_arn"},
-        {"name": "concourse_certificate_arn", "fortress_var": "concourse_certificate_arn"},
+        {"name": "cf_certificate_arn", "value": "arn:aws:acm:eu-central-1:582952184443:certificate/86776cd5-c25a-4254-9c50-59034d0bda03"},
+        {"name": "concourse_certificate_arn", "value": "arn:aws:acm:eu-central-1:582952184443:certificate/86776cd5-c25a-4254-9c50-59034d0bda03"},
 
         {"name": "dmz_01_subnet_cidr", "value": "10.90.2.0/24"},
         {"name": "dmz_02_subnet_cidr", "value": "10.90.3.0/24"},
