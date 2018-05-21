@@ -21,6 +21,13 @@
     {
       "name": "concourse_restore",
       "file": "ci/pipelines/azure/restore_pipeline.yml"
+    },
+    {
+      "name": "its_not_for_jagr_so_dont_look_here",
+      "file": "ci/pipelines/azure/dev_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"}
+      ]
     }
   ]
 }
