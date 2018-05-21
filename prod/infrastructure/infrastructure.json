@@ -72,7 +72,7 @@
         {"name": "tools_02_subnet_cidr", "value": "10.90.11.0/24"},
 
         {"name": "git_private_key", "fortress_var": "git_private_key"},
-        {"name": "bosh_backup_bucket_name", "value": "backups.cflab.grapeup.com"},
+        {"name": "bosh_backup_bucket_name", "value": "backups.devops.cflab.grapeup.com"},
         {"name": "bosh_backup_bucket_region", "value": "eu-central-1"},
         {"name": "bosh_backup_s3_access_key", "fortress_var": "aws_access_key"},
         {"name": "bosh_backup_s3_secret_key", "fortress_var": "aws_secret_key"},
