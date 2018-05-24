@@ -59,6 +59,10 @@
         {"name": "fortress_network_id", "fortress_var": "network_id"},
         {"name": "fortress_network_cidr", "fortress_var": "network_cidr"},
         {"name": "fortress_network_name", "fortress_var": "network_name"},
-        {"name": "fortress_resource_group_name", "fortress_var": "resource_group_name"}
+        {"name": "fortress_resource_group_name", "fortress_var": "resource_group_name"},
+
+        {"name": "concourse_cert_password", "value": ""},
+        {"name": "jumpbox_allowed_cidr_1", "value": "79.190.200.98/32"},
+        {"name": "jumpbox_allowed_cidr_2", "value": "193.106.245.10/32"}
     ]
 }
