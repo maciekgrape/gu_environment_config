@@ -25,5 +25,9 @@
     }
   ],
 
-  "vars": []
+  "vars": [
+    {"name": "cf_router_ssl_certificate", "team_var": "ssl_cert"},
+    {"name": "cf_router_ssl_private_key", "team_var": "ssl_key"},
+    {"name": "cf_router_ssl_certificate_password", "team_var": "ssl_password"}
+  ]
 }
