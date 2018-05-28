@@ -8,6 +8,11 @@
     {"name": "azure_client_id", "fortress_var": "azure_client_id"},
     {"name": "azure_client_secret", "fortress_var": "azure_client_secret"},
 
+    {"name": "fortress_azure_subscription_id", "fortress_var": "azure_subscription_id"},
+    {"name": "fortress_azure_tenant_id", "fortress_var": "azure_tenant_id"},
+    {"name": "fortress_azure_client_id", "fortress_var": "azure_client_id"},
+    {"name": "fortress_azure_client_secret", "fortress_var": "azure_client_secret"},
+
     {"name": "jumpbox_private_key", "fortress_var": "jumpbox_private_key"},
 
     {"name": "system_domain", "value": "test.azure.cflab.grapeup.com"},
