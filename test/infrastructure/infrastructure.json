@@ -1,6 +1,6 @@
 {
     "repo_url": "git@github.com:grapeup/gu_cf_infrastructure_azure_deployment.git",
-    "repo_version": "s3-proxy-docker",
+    "repo_version": "master",
     "repo_private_key_var_name": "git_private_key",
 
     "pipelines": [
