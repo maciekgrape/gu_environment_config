@@ -19,7 +19,7 @@
         {"name": "elastisearch_master_vm_type", "value": "general_small"},
 
         {"name": "cluster_monitor_instance_count", "value": "1"},
-        {"name": "cluster_monitor_vm_type", "value": "general_small"},
+        {"name": "cluster_monitor_vm_type", "value": "general_medium"},
 
         {"name": "maintance_instance_count", "value": "1"},
         {"name": "maintance_vm_type", "value": "general_small"},
