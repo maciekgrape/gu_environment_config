@@ -28,7 +28,7 @@
         {"name": "elasticsearch_data_vm_type", "value": "general_small"},
 
         {"name": "kibana_instance_count", "value": "1"},
-        {"name": "kibana_vm_type", "value": "general_small"},
+        {"name": "kibana_vm_type", "value": "general_medium"},
 
         {"name": "ingestor_instance_count", "value": "1"},
         {"name": "ingestor_vm_type", "value": "general_small"},
