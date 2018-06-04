@@ -1,0 +1,42 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_elk_deployment.git",
+  "repo_version": "master",
+  "repo_private_key_var_name": "git_private_key",
+
+  "pipelines": [
+    {
+      "name": "elk_deploy",
+      "file": "ci/pipelines/azure/deploy_pipeline.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"},
+
+        {"name": "elk_deployment_name", "value": "elk"},
+        {"name": "elk_network", "value": "tools"},
+
+        {"name": "upload_kibana_objects_vm_type", "value": "general_small"},
+
+        {"name": "elastisearch_master_instance_count", "value": "1"},
+        {"name": "elastisearch_master_vm_type", "value": "general_small"},
+
+        {"name": "cluster_monitor_instance_count", "value": "1"},
+        {"name": "cluster_monitor_vm_type", "value": "general_small"},
+
+        {"name": "maintance_instance_count", "value": "1"},
+        {"name": "maintance_vm_type", "value": "general_small"},
+
+        {"name": "elasticsearch_data_instance_count", "value": "1"},
+        {"name": "elasticsearch_data_vm_type", "value": "general_small"},
+
+        {"name": "kibana_instance_count", "value": "1"},
+        {"name": "kibana_vm_type", "value": "general_small"},
+
+        {"name": "ingestor_instance_count", "value": "1"},
+        {"name": "ingestor_vm_type", "value": "general_small"},
+
+        {"name": "router_instance_count", "value": "1"},
+        {"name": "router_vm_type", "value": "general_small"}
+      ]
+    }
+  ]
+}
+
