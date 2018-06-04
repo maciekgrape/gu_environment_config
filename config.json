@@ -29,7 +29,7 @@
                     {"name": "grapeup"}
                 ]
             }
-        }
+        },
         {
             "name": "mast",
             "config_repo_url": "git@github.com:maciekgrape/gu_environment_config.git",
@@ -39,7 +39,7 @@
                     {"name": "grapeup"}
                 ]
             }
-        },
+        }
     ]
 }
 
