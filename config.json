@@ -5,8 +5,8 @@
             "config_repo_url": "git@github.com:maciekgrape/gu_environment_config.git",
             "config_repo_branch": "master",
             "auth": {
-                "github_orgs": [
-                    {"name": "grapeup"}
+                "github_users": [
+                    {"name": "maciekgrape"}
                 ]
             }
         }
