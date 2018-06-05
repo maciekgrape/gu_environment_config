@@ -1,0 +1,2455 @@
+commit d4e53e48d8dbe9e672432aee5e5ad2b0803a0818
+Author: maciekgrape <maciej.staszczyk@grapeup.com>
+Date:   Tue Jun 5 11:24:41 2018 +0200
+
+    customise mast env
+
+ config.json                             |  30 ----------
+ mast/bosh_deployments/cf.json           |  38 ++++++++++++
+ mast/bosh_deployments/concourse.json    |  35 +++++++++++
+ mast/bosh_deployments/vault.json_backup |  15 +++++
+ mast/common.json                        |  52 ++++++++++++++++
+ mast/infrastructure/infrastructure.json | 101 ++++++++++++++++++++++++++++++++
+ 6 files changed, 241 insertions(+), 30 deletions(-)
+
+commit 005fed9e0cd2381343c50ad2a1f2013a257ea556
+Author: maciekgrape <37928698+maciekgrape@users.noreply.github.com>
+Date:   Mon Jun 4 16:38:23 2018 +0200
+
+    Update config
+
+ config.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 19aaf28957fa933cd810d540aead97b4a35239ad
+Author: maciekgrape <37928698+maciekgrape@users.noreply.github.com>
+Date:   Mon Jun 4 16:37:06 2018 +0200
+
+    Update config
+
+ config.json | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+
+commit aaf2fe7d0cb3d975dea7d2d561d8209a5dae6dd1
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon May 21 15:20:22 2018 +0200
+
+    add cert for cf and concourse
+
+ prod/infrastructure/infrastructure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit eb12e36edf5f88140a1dd4e44bf8376945c36096
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon May 21 14:33:18 2018 +0200
+
+    fix buckets
+
+ prod/bosh_deployments/cf.json           | 2 +-
+ prod/bosh_deployments/concourse.json    | 2 +-
+ prod/common.json                        | 6 +++---
+ prod/infrastructure/infrastructure.json | 2 +-
+ 4 files changed, 6 insertions(+), 6 deletions(-)
+
+commit af35bc841f00296cb02ddc0e830ebea800efb8de
+Merge: 077a501 09a372f
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon May 21 11:56:29 2018 +0200
+
+    Merge branch 'master' of github.com:grapeup/gu_environment_config
+
+commit 077a501eae6767f1c54fbb13faa92feec5a43c30
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon May 21 11:55:58 2018 +0200
+
+    remove useless teams
+
+ bosh-dev/common.json                               |  39 --------
+ bosh-dev/infrastructure/infrastructure.json        |  76 ---------------
+ config.json                                        |  24 +----
+ deployments-dev/bosh/bosh.json                     |  44 ---------
+ deployments-dev/bosh_deployments/cf.json           |  23 -----
+ deployments-dev/bosh_deployments/concourse.json    |  23 -----
+ deployments-dev/common.json                        |  37 --------
+ deployments-dev/infrastructure/infrastructure.json |  54 -----------
+ inf-dev/common.json                                |  37 --------
+ inf-dev/infrastructure/infrastructure.json         |  45 ---------
+ prod/bosh_deployments/cf.json                      |   4 +-
+ prod/bosh_deployments/concourse.json               |   4 +-
+ prod/bosh_deployments/vault.json                   |   4 +-
+ prod/infrastructure/infrastructure.json            |   4 +-
+ test-env/common.json                               |  37 --------
+ test-env/infrastructure/infrastructure.json        |  54 -----------
+ test/bosh_deployments/cf.json                      |  38 ++++++++
+ test/bosh_deployments/concourse.json               |  35 +++++++
+ .../bosh_deployments/vault.json                    |   5 +-
+ test/cf_application_deployments/vault_broker.json  |  23 +++++
+ test/common.json                                   |  48 ++++++++++
+ test/infrastructure/infrastructure.json            | 102 +++++++++++++++++++++
+ 22 files changed, 258 insertions(+), 502 deletions(-)
+
+commit 09a372f3263d46131d7e3efee9ef388ccbb549de
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri May 18 09:45:14 2018 +0200
+
+    Update infrastructure_docker_image.json
+
+ devops/main/infrastructure_docker_image.json | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit ce429642ad0677c7ea4551e321934e8d1cfb5d5b
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri May 18 09:36:00 2018 +0200
+
+    Update common.json
+
+ prod/common.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit c8d8707c7739d6f467d486feafad65d085053aaf
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon May 14 13:53:23 2018 +0200
+
+    add pause/unpause
+
+ prod/infrastructure/infrastructure.json | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit e3c0f82a95f8a11e034a626c306408337f6ab1c9
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu May 10 12:18:56 2018 +0200
+
+    remove ami
+
+ prod/infrastructure/infrastructure.json | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ef059ffb4ab1377b4b4423d9f88d33f4feff813f
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu May 10 12:08:44 2018 +0200
+
+    fix pipeline path
+
+ prod/cf_application_deployments/vault_broker.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit afd4a98b35e0a188481a8db12a0745c4e7a6e35f
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu May 10 12:03:17 2018 +0200
+
+    update prod
+
+ prod/bosh_deployments/cf.json                     | 8 --------
+ prod/bosh_deployments/concourse.json              | 4 ++--
+ prod/bosh_deployments/vault.json                  | 5 ++---
+ prod/cf_application_deployments/vault_broker.json | 2 +-
+ prod/infrastructure/infrastructure.json           | 4 ++--
+ 5 files changed, 7 insertions(+), 16 deletions(-)
+
+commit d0a2b21f23021fc574bed185488696c4df9cabdf
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu May 10 11:57:53 2018 +0200
+
+    Update vault.json
+
+ prod/bosh_deployments/vault.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d8c6259ffea4ddff6db210060c684da2f4c5c6b7
+Author: Maciej Trzebiński <fapfood@gmail.com>
+Date:   Fri Apr 27 11:54:19 2018 +0200
+
+    Update config.json
+
+ config.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ce214e5ccc0f005ff09a81995530bba8f9620665
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Apr 18 15:58:51 2018 +0200
+
+    fix config
+
+ prod/bosh_deployments/cf.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit f4bc40cbe155bc28c7ff4a7f8638b5e11bf50dc9
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Apr 18 15:52:27 2018 +0200
+
+    fix config
+
+ prod/bosh_deployments/cf.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 872b95e64e5e3586d762b3d72cc980c8c60f6fff
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Apr 18 15:46:06 2018 +0200
+
+    fix config
+
+ prod/bosh_deployments/cf.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7546a8aacf1a83a220458191978974f98740b6c3
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Apr 18 15:40:30 2018 +0200
+
+    fix config
+
+ prod/bosh_deployments/cf.json | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+commit 49cc5dd85bc685a536058b15a154f73c4dcf3b16
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Mon Apr 16 15:54:33 2018 +0200
+
+    fix config
+
+ prod/bosh_deployments/concourse.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit c843bd8486fe643f471433e1a75e3db9138a57d2
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Apr 13 12:55:58 2018 +0200
+
+    change vars
+
+ prod/bosh_deployments/concourse.json | 10 ++---
+ prod/common.json                     | 83 ++++++++++++++++++++----------------
+ 2 files changed, 51 insertions(+), 42 deletions(-)
+
+commit 43b69955907df9d2d880416383b7208aadac065a
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Mon Apr 9 15:25:20 2018 +0200
+
+    Update common.json
+
+ prod/common.json | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 2b7e0e258326b8cce3a2bf9a6add33acf4e08e98
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Mon Apr 9 15:10:31 2018 +0200
+
+    Update cf.json
+
+ prod/bosh_deployments/cf.json | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit 5d398f53d07bc6a85c1ff1fe3685675a8d192b80
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Mon Mar 26 18:25:17 2018 +0200
+
+    WORK IN PROGRESS
+
+ bosh-dev/common.json | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+
+commit 7349c0b50b8949c15ec3cb33f952b8ee8dae1b41
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Mon Mar 26 16:26:23 2018 +0200
+
+    update
+
+ bosh-dev/infrastructure/infrastructure.json | 4 ----
+ 1 file changed, 4 deletions(-)
+
+commit 8fb9b6b58294f83aab4a8b908ecae26fed0515f4
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 23 13:35:03 2018 +0100
+
+    move to central
+
+ bosh-dev/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6498681dd0964787e4f86382c2e8616e1be335cf
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 23 13:18:56 2018 +0100
+
+    bug testing
+
+ bosh-dev/infrastructure/infrastructure.json | 33 ++++++-----------------------
+ 1 file changed, 7 insertions(+), 26 deletions(-)
+
+commit e2891e7f5785ff678685822f2f8f64f13c074df9
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Fri Mar 23 08:23:54 2018 +0100
+
+    Changed dev pipeline to deploy pipeline for concourse in prod env
+
+ prod/bosh_deployments/concourse.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9039ffb2790bd31ed1c1a48ddcc633af5447fec3
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Fri Mar 23 07:58:40 2018 +0100
+
+    Changed prod cf dev_pipeline to deploy_pipeline
+
+ prod/bosh_deployments/cf.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d9bc4575e3a279c725ef8cb24b5c0d241f0f6fdd
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Thu Mar 22 14:03:38 2018 +0100
+
+    Changed terraform-state bucket region
+
+ prod/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9f2c9d8f5886738085f9470cd5c8bbf89b4db691
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Mar 22 12:58:50 2018 +0100
+
+    Updated concourse-bbr release version
+
+ prod/bosh_deployments/concourse.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e492565db15235d5197b41ef71fa47f8c3341625
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Wed Mar 21 11:05:50 2018 +0100
+
+    Update config.json
+
+ config.json | 50 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 50 insertions(+)
+
+commit b436c2e2e6846459fefa43b89d5356a54496fbdc
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Wed Mar 21 10:57:03 2018 +0100
+
+    Update config.json
+
+ config.json | 50 --------------------------------------------------
+ 1 file changed, 50 deletions(-)
+
+commit 731ff9865a281b67c2eefe47f23851efcf480f71
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 19 10:52:10 2018 +0100
+
+    change backup bucket
+
+ prod/bosh_deployments/cf.json        | 2 +-
+ prod/bosh_deployments/concourse.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 94a60e5de3d0704d936647ecc4fa35434ad315a3
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 19 09:24:30 2018 +0100
+
+    change to dev
+
+ prod/bosh_deployments/cf.json        | 2 +-
+ prod/bosh_deployments/concourse.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 04219bfa64b56a9022c1052e78bcf6fcc5365716
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 19 08:10:08 2018 +0100
+
+    change to master
+
+ prod/infrastructure/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit aa60261018ae1e750880a559ac4acbc05af02a7b
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 16 15:01:16 2018 +0100
+
+    fix json
+
+ prod/infrastructure/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3689f63eeddca66cf0e1c6e5fc5100cd6e9178fa
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 16 14:55:13 2018 +0100
+
+    update prod
+
+ prod/bosh/bosh.json                     | 56 ---------------------------------
+ prod/common.json                        | 11 ++++++-
+ prod/infrastructure/infrastructure.json | 46 ++++++++++++++++++++++++---
+ 3 files changed, 52 insertions(+), 61 deletions(-)
+
+commit 3624ba5ba17e7e4ec4c71517c5b2913955e0aaaa
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 16 13:20:22 2018 +0100
+
+    fix version bucket
+
+ bosh-dev/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 13f512744153ad6c84c094b3cc483b1a0a418f31
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Mar 16 12:44:38 2018 +0100
+
+    update bucket
+
+ bosh-dev/infrastructure/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cc2d99621c9c40deb9063d0a3a77dba54914a0c7
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Mar 16 11:44:52 2018 +0100
+
+    update
+
+ bosh-dev/bosh/bosh.json                     | 44 ------------------------
+ bosh-dev/infrastructure/infrastructure.json | 53 ++++++++++++++++++++++++++---
+ 2 files changed, 49 insertions(+), 48 deletions(-)
+
+commit 007aa4fdb2e7296e10744ef043ffe08d861c0204
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 12 15:59:14 2018 +0100
+
+    change to dev
+
+ bosh-dev/bosh/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3527299afddfb241725488caed1fa19e3231d8b0
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 12 15:20:33 2018 +0100
+
+    change to deploy
+
+ bosh-dev/bosh/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fb743ab8555202e17974b3a9f523619da7b4d687
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 12 14:46:41 2018 +0100
+
+    change repo
+
+ bosh-dev/bosh/bosh.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 77cd5539f75af6f55f3929a6eb603f3258c41ae6
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Mar 12 14:35:43 2018 +0100
+
+    change repo
+
+ bosh-dev/infrastructure/infrastructure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit f2d87ae34ea46dcfed4f8ed2dedc24079b4b3da8
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Mar 1 13:04:16 2018 +0100
+
+    break inf-dev
+
+ gu_environment_config.iml                  | 9 +++++++++
+ inf-dev/infrastructure/infrastructure.json | 9 ---------
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+commit 1ee1f95d08f9cac264e62192c5f197f69d6553e0
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Feb 28 16:18:13 2018 +0100
+
+    add release names
+
+ deployments-dev/bosh_deployments/cf.json        | 3 ++-
+ deployments-dev/bosh_deployments/concourse.json | 3 ++-
+ prod/bosh_deployments/cf.json                   | 3 ++-
+ prod/bosh_deployments/concourse.json            | 3 ++-
+ 4 files changed, 8 insertions(+), 4 deletions(-)
+
+commit 8f9bd6f93c86d24eaa6a7ad5d84e759e1f872f80
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Wed Feb 28 11:49:20 2018 +0100
+
+    Removed test env
+
+ config.json | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+commit 56f8969b373f83bde6d26009c9e80adad24a46d7
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Wed Feb 28 11:46:57 2018 +0100
+
+    Added test env
+
+ config.json | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 4d027033cab467356456e26ca299d2cbbc57d400
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Tue Feb 27 15:11:43 2018 +0100
+
+    Removed test-env
+
+ config.json | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+commit efd703a1bf3fccfc29081bdc9893d78d79bfb66a
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Tue Feb 27 15:00:58 2018 +0100
+
+    Added test env
+
+ config.json                                 | 10 ++++++
+ test-env/common.json                        | 37 ++++++++++++++++++++
+ test-env/infrastructure/infrastructure.json | 54 +++++++++++++++++++++++++++++
+ 3 files changed, 101 insertions(+)
+
+commit 64b2c989032503421fcbcd58e7e613ef6e8f713d
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Fri Feb 23 11:25:23 2018 +0100
+
+    Added envs
+
+ config.json | 53 ++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 52 insertions(+), 1 deletion(-)
+
+commit fdae8095353000511ebe8ef3d452615ea81236d3
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Fri Feb 23 10:25:08 2018 +0100
+
+    Removed all envs
+
+ config.json | 53 +----------------------------------------------------
+ 1 file changed, 1 insertion(+), 52 deletions(-)
+
+commit 0cdad505c2d972c59d39f75e120499320a0457c9
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:56:19 2018 +0100
+
+    Changed envs branches to master
+
+ config.json | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit b0bea33288c6cab240fce60087af2699eae6d604
+Merge: 186a3a4 46c40a2
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:52:17 2018 +0100
+
+    Merge remote-tracking branch 'origin/devops-fortress'
+
+commit 186a3a42999749b924e4c8383fd61b8cd2095902
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:51:43 2018 +0100
+
+    Merge fix
+
+ prod/common.json | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+commit b740b30de490932dce49ca911f3beb1363f270e1
+Merge: cb15811 10b83a7
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:43:24 2018 +0100
+
+    Merge branch 'devops'
+
+commit cb1581180986cd53b6375188803112c87a9dc56f
+Merge: 74ff538 bffcc48
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:42:18 2018 +0100
+
+    Merge remote-tracking branch 'origin/prod'
+
+commit 74ff53849fda845b1b3c317a4e7621f44f7b1aa5
+Merge: 50c0c28 eb09179
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:27:03 2018 +0100
+
+    Merge remote-tracking branch 'origin/bosh-dev'
+
+commit 50c0c284d5b394a538723f5b558fd7083b840bde
+Merge: 6a767e0 c522ef2
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:26:56 2018 +0100
+
+    Merge remote-tracking branch 'origin/inf-dev'
+
+commit 6a767e0596c30752d23e57b782e4fd1953f48f42
+Merge: b25b37a 7c50142
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:25:37 2018 +0100
+
+    Merge branch 'deployments-dev' of github.com:grapeup/gu_environment_config into deployments-dev
+
+commit b25b37a1d53cb7cb65e6e60209851f8c5175843b
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 12:25:29 2018 +0100
+
+    Added vault deployment
+
+ deployments-dev/bosh_deployments/vault.json | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit 10b83a76fe4ec9024b240d181a1f03c3070abd34
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 11:45:22 2018 +0100
+
+    Added common.json
+
+ devops/common.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit eafbd949428f0e9f96a81d4bf266fdbc37fb42fd
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 11:41:51 2018 +0100
+
+    Fixed file extension
+
+ .../{infrastructure_docker_image.yml => infrastructure_docker_image.json} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8e99adc542bc53b8653c2ebf017929633e0f27f6
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 11:39:14 2018 +0100
+
+    Added infra docker pipeline
+
+ README.md                                   |  1 -
+ devops/main/infrastructure_docker_image.yml | 19 +++++++++++++++++++
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+
+commit bffcc48a8c83cb330cf4774a0526133da45f0660
+Author: cflab-bia-1 <cflab-bia-1@grapeup.com>
+Date:   Thu Feb 22 11:13:46 2018 +0100
+
+    Fixed infra and bosh versions. Removed empty array from vault config
+
+ prod/bosh/bosh.json                     | 2 +-
+ prod/bosh_deployments/vault.json        | 4 +---
+ prod/infrastructure/infrastructure.json | 2 +-
+ 3 files changed, 3 insertions(+), 5 deletions(-)
+
+commit 7c50142e84c3addbbb4ce0a2c93ef9e988978cec
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Thu Feb 22 11:09:39 2018 +0100
+
+    Update concourse.json
+
+ deployments-dev/bosh_deployments/concourse.json | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 29c58f97b7038416575a3121392adee5e96eb543
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Thu Feb 22 11:09:14 2018 +0100
+
+    Update cf.json
+
+ deployments-dev/bosh_deployments/cf.json | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 2359bf8286138bed116e00c403732391aa596433
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Feb 22 08:48:58 2018 +0100
+
+    Changed infrastructure version to 0.0.2
+
+ deployments-dev/infrastructure/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e22b714590603b73be76326ee8484264c385ecd4
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Feb 22 08:43:29 2018 +0100
+
+    Changed cf and concourse deploy pipelines to dev pipelines
+
+ deployments-dev/bosh_deployments/cf.json        | 4 ++--
+ deployments-dev/bosh_deployments/concourse.json | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+commit eb0917907080e249ce844357330d718385783c52
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Feb 21 16:11:37 2018 +0100
+
+    change releases bucket
+
+ bosh-dev/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c522ef23c3d1abccdd39aa449e85ce498631dd75
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 16:11:09 2018 +0100
+
+    Changed releases bucket
+
+ inf-dev/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 46c40a2a4423618ac2f38d1715c7f9e903238bb9
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 16:05:46 2018 +0100
+
+    Renamed bosh-deployments-dev
+
+ config.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 81c753589f89f5d77928ce6e58bd7cd42dad1c20
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 15:59:28 2018 +0100
+
+    Renamed env
+
+ {bosh-deployments-dev => deployments-dev}/bosh/bosh.json          | 0
+ .../bosh_deployments/cf.json                                      | 0
+ .../bosh_deployments/concourse.json                               | 0
+ {bosh-deployments-dev => deployments-dev}/common.json             | 8 ++++----
+ .../infrastructure/infrastructure.json                            | 0
+ 5 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 7e523d5cc3b6ab0343af25466dc939efb9ddff12
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Wed Feb 21 15:48:51 2018 +0100
+
+    change releases bucket
+
+ prod/common.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit bce390dd628116a77056d3d5497cc5a5c2be3efc
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 14:54:51 2018 +0100
+
+    Renamed root folder
+
+ {bosh_deployments_dev => bosh-deployments-dev}/bosh/bosh.json             | 0
+ {bosh_deployments_dev => bosh-deployments-dev}/bosh_deployments/cf.json   | 0
+ .../bosh_deployments/concourse.json                                       | 0
+ {bosh_deployments_dev => bosh-deployments-dev}/common.json                | 0
+ .../infrastructure/infrastructure.json                                    | 0
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e99e1d330b7243a4cb95e28b89005679e69f88ae
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 13:15:06 2018 +0100
+
+    Added deployments pipelines
+
+ bosh_deployments_dev/bosh/bosh.json                | 44 ++++++++++++++++++
+ bosh_deployments_dev/bosh_deployments/cf.json      | 15 ++++++
+ .../bosh_deployments/concourse.json                | 15 ++++++
+ bosh_deployments_dev/common.json                   | 37 +++++++++++++++
+ .../infrastructure/infrastructure.json             | 54 ++++++++++++++++++++++
+ 5 files changed, 165 insertions(+)
+
+commit 132f22b77d778e430ce025d97801af8cef910fe2
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 13:14:19 2018 +0100
+
+    Added bosh-deployments-dev environment
+
+ config.json | 102 +++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 52 insertions(+), 50 deletions(-)
+
+commit 433be43dff21e0b3db062d9c815fe6ff719bc946
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 12:55:17 2018 +0100
+
+    Removed temp pipelines
+
+ prod/bosh_deployments/docker-images.json          | 30 ----------------------
+ prod/bosh_deployments/prometheus-compilation.json | 31 -----------------------
+ 2 files changed, 61 deletions(-)
+
+commit 39bd693767087b6e424796240a0fb2bbdd7bd625
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 12:52:08 2018 +0100
+
+    Fixed config.json after branch rename
+
+ config.json | 36 +++++++++++++++++++++++++++++++++---
+ 1 file changed, 33 insertions(+), 3 deletions(-)
+
+commit bfe774b9751b890b945823ea1590cd322e45a810
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 11:36:27 2018 +0100
+
+    Renamed deployment groups
+
+ prod/{bosh_group => bosh}/bosh.json                                       | 0
+ prod/{bosh_deployments_group => bosh_deployments}/cf.json                 | 0
+ prod/{bosh_deployments_group => bosh_deployments}/concourse.json          | 0
+ prod/{bosh_deployments_group => bosh_deployments}/docker-images.json      | 0
+ .../prometheus-compilation.json                                           | 0
+ prod/{bosh_deployments_group => bosh_deployments}/vault.json              | 0
+ prod/{infra_group => infrastructure}/infrastructure.json                  | 0
+ 7 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 34e65bf5ae50978f542949e4074fbb70c03dc567
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 11:20:53 2018 +0100
+
+    Added missing gitignore
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 230b8271eef6de305cc640a53a651d9566def781
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 10:40:33 2018 +0100
+
+    Renamed bosh-dev groups
+
+ bosh-dev/{bosh_group => bosh}/bosh.json                      | 0
+ bosh-dev/{infra_group => infrastructure}/infrastructure.json | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 88ee9ad764d968df0af423ed42590b743d2fc0b4
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 21 10:38:20 2018 +0100
+
+    Changed infrastructure version to stable one
+
+ bosh-dev/infra_group/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 53195cd241e09b795eaa790e6a894db35afb09de
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 16:46:55 2018 +0100
+
+    Added concourse_utils vars
+
+ bosh-dev/common.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit aa829412ef2e8234bc5a9c03642df3a3188af80f
+Merge: 5624def 6493cd6
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 16:13:25 2018 +0100
+
+    Merge branch 'bosh-dev' of github.com:grapeup/gu_environment_config into bosh-dev
+
+commit 5624def99074f4b7b043ede376ed2543d8c7c4ac
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 16:13:16 2018 +0100
+
+    Updated config
+
+ bosh-dev/bosh_group/bosh.json            | 4 ++--
+ bosh-dev/infra_group/infrastructure.json | 3 +--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+commit 6493cd607c6d1a9f2b5d3563f9c89e481ef0890c
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Tue Feb 20 16:00:31 2018 +0100
+
+    Removed trigger from bosh deployment
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d18a9d8f6f9c0dad55472abe15e8184a0f8dd3e2
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 15:15:31 2018 +0100
+
+    Added concourse_utils params
+
+ inf-dev/common.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 99f85557e490997038ba32c8ba0675192d421307
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 13:05:44 2018 +0100
+
+    Renamed dev pipeline
+
+ inf-dev/infrastructure/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cfa346afcf998facf36473749537f06029747fbd
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 13:03:11 2018 +0100
+
+    Added dev_pipeline
+
+ inf-dev/infrastructure/infrastructure.json | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+commit 66d34d6315548cad1dc223e1f1aed4630a1f23b8
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 12:36:15 2018 +0100
+
+    Added restore pipeline again
+
+ inf-dev/infrastructure/infrastructure.json | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 2df86e9a7ac599ffbdd5fc110ae70d62626a6362
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 12:34:16 2018 +0100
+
+    Removed release pipeline
+
+ inf-dev/infrastructure/infrastructure.json | 4 ----
+ 1 file changed, 4 deletions(-)
+
+commit 8a7532e0679e10bda69b16072aa0446272b1e0ae
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 12:16:10 2018 +0100
+
+    Added release pipeline
+
+ inf-dev/common.json                        | 7 ++++++-
+ inf-dev/infrastructure/infrastructure.json | 4 ++++
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+commit 6f62a16945ec283ba0e00a470beab0992f8c281d
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 20 10:09:16 2018 +0100
+
+    Updated config structure
+
+ deploy-infrastructure.json                 | 91 ------------------------------
+ destroy-env.json                           | 87 ----------------------------
+ inf-dev/common.json                        | 28 +++++++++
+ inf-dev/infrastructure/infrastructure.json | 54 ++++++++++++++++++
+ 4 files changed, 82 insertions(+), 178 deletions(-)
+
+commit b2c17289e8d0948ceee03c3aeafcf5a19aabe5e1
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Feb 15 13:34:52 2018 +0100
+
+    add var
+
+ prod/bosh_deployments_group/docker-images.json | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit acb91ca0db5bf672eba9932ab1f0e5a5e3a68cba
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Feb 15 13:28:58 2018 +0100
+
+    add build docker pipeline
+
+ prod/bosh_deployments_group/docker-images.json | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit c9319da806849bad66854b625a172c098474da85
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Feb 15 12:54:50 2018 +0100
+
+    rename to vault
+
+ prod/bosh_deployments_group/{config-server.json => vault.json} | 4 ++--
+ prod/cf_application_deployments/vault_broker.json              | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 8a541a95dac6adb1b1e6644a79de3d11958676c4
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 14 16:48:34 2018 +0100
+
+    Reverted test change
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e0f00003246caae2095fadf31c5ea77cfc8f1163
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 14 16:46:26 2018 +0100
+
+    test
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8ee63b9ff80dda9f67880c3514ec3de2e31f1ad4
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Feb 14 13:04:06 2018 +0100
+
+    fix var to value
+
+ prod/cf_application_deployments/vault_broker.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit f06e6135f2233601e27861792900ef097b8a9874
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Feb 14 12:57:00 2018 +0100
+
+    create vault broker pipeline
+
+ prod/cf_application_deployments/vault_broker.json | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 9dc1d81c12c7be05bb83686a2e1ab949ae6ce310
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 14 12:47:28 2018 +0100
+
+    Renamed bosh dev pipeline again
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b6eb9118bc0a46c7fcae7674e194907776cd8a7a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 14 10:51:29 2018 +0100
+
+    Reverted last changes
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5cf34241bf22b353752ab6978076967129e53104
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 14 10:12:27 2018 +0100
+
+    Updated bosh dev pipeline name
+
+ bosh-dev/bosh_group/bosh.json | 2 +-
+ bosh-dev/common.json          | 7 ++++++-
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+commit b645cf32d7c89085e9022d51e4ed6fbb324978a1
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 13 15:56:54 2018 +0100
+
+    Testing dev pipeline
+
+ bosh-dev/bosh_deployments_group/config-server.json | 18 ------------------
+ bosh-dev/bosh_group/bosh.json                      |  4 ++--
+ bosh-dev/infra_group/infrastructure.json           |  2 +-
+ 3 files changed, 3 insertions(+), 21 deletions(-)
+
+commit 24ae88cd9c5200caacd854e31be813707d1f56ef
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Tue Feb 13 12:43:29 2018 +0100
+
+    move to refactoring/logical_modules
+
+ bosh-dev/infra_group/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 54f6e725851c8d30661c1aae15f07dc0748210ed
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Tue Feb 13 11:55:58 2018 +0100
+
+    new config format
+
+ README.md                                          |  1 -
+ backup-bosh.json                                   | 40 ---------
+ backup-cf.json                                     | 45 -----------
+ backup-concourse.json                              | 45 -----------
+ .../bosh_deployments_group/config-server.json      |  0
+ bosh-dev/bosh_group/bosh.json                      | 44 ++++++++++
+ {prod => bosh-dev}/common.json                     | 10 +--
+ {prod => bosh-dev}/infra_group/infrastructure.json | 18 ++---
+ deploy-bosh.json                                   | 78 ------------------
+ deploy-cf.json                                     | 52 ------------
+ deploy-concourse.json                              | 51 ------------
+ deploy-infrastructure.json                         | 94 ----------------------
+ destroy-infrastructure.json                        | 93 ---------------------
+ prod/bosh_deployments_group/cf.json                | 34 --------
+ prod/bosh_deployments_group/concourse.json         | 34 --------
+ .../prometheus-compilation.json                    | 31 -------
+ prod/bosh_group/bosh.json                          | 56 -------------
+ restore-bosh.json                                  | 39 ---------
+ restore-cf.json                                    | 43 ----------
+ restore-concourse.json                             | 43 ----------
+ 20 files changed, 58 insertions(+), 793 deletions(-)
+
+commit 9b60bf57f73bc2aacbe37a74da87f33570041aa1
+Merge: 04e3849 009fd3a
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Tue Feb 13 11:52:37 2018 +0100
+
+    Merge branch 'prod' of github.com:grapeup/gu_environment_config into bosh-dev
+
+commit 009fd3a6d98d9489ab40044264bc97696e84f170
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Feb 13 09:13:40 2018 +0100
+
+    Changed domain name cf-min to prod
+
+ prod/common.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 18d682984f2b7eebb4bb2256978e6519f738b48a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Mon Feb 12 16:26:33 2018 +0100
+
+    Fixed timers
+
+ prod/bosh_deployments_group/cf.json                     | 2 +-
+ prod/bosh_deployments_group/concourse.json              | 2 +-
+ prod/bosh_deployments_group/prometheus-compilation.json | 3 ---
+ prod/bosh_group/bosh.json                               | 2 +-
+ 4 files changed, 3 insertions(+), 6 deletions(-)
+
+commit e284866ddf628fba3d674d274a1bdeda366617c5
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Feb 12 13:55:23 2018 +0100
+
+    fix name
+
+ prod/bosh_deployments_group/config-server.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6856ea8c72ed46447844dcd7d350951aea427431
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Feb 12 13:53:27 2018 +0100
+
+    fix empty vars
+
+ prod/bosh_deployments_group/config-server.json | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 6cea7e232aafb9e136ed9d9e2c169ee0f71d43cc
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Feb 12 13:51:28 2018 +0100
+
+    fix array
+
+ prod/bosh_deployments_group/config-server.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit fd8d88edce434a0bd19f598c278e2cf42d092465
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Mon Feb 12 13:43:42 2018 +0100
+
+    add config-server pipeline
+
+ prod/bosh_deployments_group/cf.json            |  6 ++----
+ prod/bosh_deployments_group/config-server.json | 15 +++++++++++++++
+ 2 files changed, 17 insertions(+), 4 deletions(-)
+
+commit 60360f31c41161027b613cb4ba5f72f97fc2c94a
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 15:33:50 2018 +0100
+
+    fix?
+
+ prod/bosh_deployments_group/prometheus-compilation.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 12912df69d42c86b7b43177838ce0eab18d420f5
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 15:30:48 2018 +0100
+
+    add required vars
+
+ prod/bosh_deployments_group/prometheus-compilation.json | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit ea006a7bb254e7144a445c28b7fff71ff60602f2
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 14:06:57 2018 +0100
+
+    add git_key for jumpbox
+
+ prod/infra_group/infrastructure.json | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 0a643cff1f9d2f3232aa92ceae880b1ab8686a1d
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 13:45:32 2018 +0100
+
+    change prod to cf-min
+
+ prod/common.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e0b9bd5e1e75e26129d84c8a2b3aa19dbf73e0ed
+Merge: 6322169 a10901a
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 13:35:25 2018 +0100
+
+    Merge remote-tracking branch 'origin/prod' into prod
+
+commit 6322169fd10c42fd629aa4053f645a47b3ee6108
+Merge: a9bd605 de83dee
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 13:34:59 2018 +0100
+
+    Merge remote-tracking branch 'origin/prod' into prod
+
+commit a10901a4e95a42ca83d0ccf9bba356294486b2ae
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 13:34:56 2018 +0100
+
+    Fix
+
+ prod/infra_group/infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a9bd605af711ef3580e3a5253de7a6da33660ba8
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 13:33:11 2018 +0100
+
+    fix bucket name
+
+ prod/common.json | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+commit de83deef7bb6013791f6cc0dd4bf8c9e082d175b
+Merge: e18bc98 7a17dbe
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 13:30:42 2018 +0100
+
+    Merge branch 'prod' of github.com:grapeup/gu_environment_config into prod
+
+commit e18bc987ca61f3a2320f69a5863e2c59c2d8c5a7
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 13:23:31 2018 +0100
+
+    Added fortress route table id reference
+
+ prod/infra_group/infrastructure.json | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 7a17dbea45863493e6874ef60f78d7b2f7d590c5
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 11:52:48 2018 +0100
+
+    add vars
+
+ prod/bosh_deployments_group/prometheus-compilation.json | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit c5d2c5e638d1b0ad38f9a0d5a637c7dca6094345
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Fri Feb 9 11:41:49 2018 +0100
+
+    add compile_prometheus
+
+ prod/bosh_deployments_group/prometheus-compilation.json | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit db1b0cd9e0248dec93c2ea4737eb5ae7577c0f5d
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 11:01:37 2018 +0100
+
+    Fixed destroy pipeline reference. Cleanup old configs
+
+ backup-bosh.json                     | 28 ------------
+ backup-cf.json                       | 32 -------------
+ backup-concourse.json                | 32 -------------
+ create-infrastructure.json           | 89 ------------------------------------
+ deploy-bosh.json                     | 70 ----------------------------
+ deploy-cf.json                       | 47 -------------------
+ deploy-concourse.json                | 44 ------------------
+ prod/infra_group/infrastructure.json |  2 +-
+ restore-bosh.json                    | 26 -----------
+ restore-cf.json                      | 30 ------------
+ restore-concourse.json               | 30 ------------
+ 11 files changed, 1 insertion(+), 429 deletions(-)
+
+commit 133b4f36369eb1d9c642df41363cf9c06fabbedb
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 10:55:36 2018 +0100
+
+    Fixed concourse json
+
+ prod/bosh_deployments_group/concourse.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 573062f978c3ffb51bd49ddc62fa6014b486d64a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Feb 9 10:23:52 2018 +0100
+
+    Fix
+
+ prod/bosh_deployments_group/cf.json        | 4 ++--
+ prod/bosh_deployments_group/concourse.json | 4 ++--
+ prod/bosh_group/bosh.json                  | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+commit d0cdbd38212b146e671c8a9c9355d700b03f412d
+Author: Maciej Trzebiński <fapfood@gmail.com>
+Date:   Thu Feb 8 18:32:15 2018 +0100
+
+    Update cf.json
+
+ prod/bosh_deployments_group/cf.json | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 59daac22cf4f7a0a9a791d156007de7956e4236c
+Author: Maciej Trzebiński <fapfood@gmail.com>
+Date:   Thu Feb 8 18:31:21 2018 +0100
+
+    Update common.json
+
+ prod/common.json | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 5743b18e54e89af4949deeba1e74a8aca857b386
+Author: Maciej Trzebiński <fapfood@gmail.com>
+Date:   Thu Feb 8 16:45:31 2018 +0100
+
+    Update common.json
+
+ prod/common.json | 6 ------
+ 1 file changed, 6 deletions(-)
+
+commit 7735d2fac4ba8d4416c864a12ebe2859e5c84c9c
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Thu Feb 8 16:38:43 2018 +0100
+
+    switch to master
+
+ prod/bosh_deployments_group/cf.json        | 4 ++--
+ prod/bosh_deployments_group/concourse.json | 4 ++--
+ prod/bosh_group/bosh.json                  | 4 ++--
+ prod/infra_group/infrastructure.json       | 2 +-
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 62766a53065b1449ca2ce558e1f581076753ad81
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Feb 7 16:25:31 2018 +0100
+
+    Fix
+
+ prod/common.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 15d3e6b995231c648e317d56813c2c837e620323
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Feb 7 09:40:31 2018 +0100
+
+    Added new config structure
+
+ prod/bosh_deployments_group/cf.json        | 34 ++++++++++++++++++
+ prod/bosh_deployments_group/concourse.json | 34 ++++++++++++++++++
+ prod/bosh_group/bosh.json                  | 56 ++++++++++++++++++++++++++++++
+ prod/common.json                           | 34 ++++++++++++++++++
+ prod/infra_group/infrastructure.json       | 51 +++++++++++++++++++++++++++
+ 5 files changed, 209 insertions(+)
+
+commit 04e384940f47042bdd3820fd1f6e9cfcd5e644e4
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Feb 2 17:01:37 2018 +0100
+
+    parametrize locks
+
+ backup-bosh.json            |  71 ++++++++++--------
+ backup-cf.json              |   9 ++-
+ backup-concourse.json       |   9 ++-
+ deploy-bosh.json            | 147 ++++++++++++++++++------------------
+ deploy-cf.json              |   9 ++-
+ deploy-concourse.json       |   9 ++-
+ deploy-infrastructure.json  | 179 +++++++++++++++++++++++---------------------
+ destroy-env.json            |  86 ---------------------
+ destroy-infrastructure.json |  93 +++++++++++++++++++++++
+ restore-bosh.json           |  69 +++++++++--------
+ restore-cf.json             |   9 ++-
+ restore-concourse.json      |   9 ++-
+ 12 files changed, 378 insertions(+), 321 deletions(-)
+
+commit f4d024a129411e3e1365779344798ce5be69ba53
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Feb 2 14:46:53 2018 +0100
+
+    use master
+
+ deploy-infrastructure.json | 4 ++--
+ destroy-env.json           | 8 ++++----
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 60fee46144e7f7aac0c792b62023ca19a76ac6c9
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri Feb 2 12:52:29 2018 +0100
+
+    Update deploy-infrastructure.json
+
+ deploy-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 31c293098993750bdd4343398f5fc8bd3488694d
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri Feb 2 12:40:56 2018 +0100
+
+    Update deploy-infrastructure.json
+
+ deploy-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b48a719c1e81e9412b8fe2fd3a0fee2fbc895709
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri Feb 2 12:40:28 2018 +0100
+
+    Update backup-bosh.json
+
+ backup-bosh.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3c6086d2add702518d5bc7b33abe5cef931914ed
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Fri Feb 2 12:37:26 2018 +0100
+
+    Update backup-bosh.json
+
+ backup-bosh.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a23f01ddf6f602218e1a58e2934c6ec262712248
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Tue Jan 30 13:22:51 2018 +0100
+
+    delete readme
+
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4854da331c4794f997ff6214ca7059c6b9c39b51
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Tue Jan 30 13:22:27 2018 +0100
+
+    init
+
+ config.json | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 7c8e3810b6f7db9ee1c7d9cc159936d92313e309
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 19:02:15 2018 +0100
+
+    add locker to bosh backup and restore
+
+ backup-bosh.json  | 6 +++++-
+ restore-bosh.json | 6 +++++-
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+commit c515d083375554694a2d281903b420e8f16222d1
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 18:52:51 2018 +0100
+
+    add concourse restore
+
+ restore-concourse.json | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+commit 5dbf3e06515221ac9eb762846e96e4d8a7f549c9
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 18:25:05 2018 +0100
+
+    add concourse backup
+
+ backup-concourse.json | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit 269f8dde60bb4e5e1e3a93877fb1fa8f3c772817
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 18:21:21 2018 +0100
+
+    add cf restore
+
+ restore-cf.json | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+commit 11da92eafd6341d3af2ac7571fe5bc347847b710
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 18:15:50 2018 +0100
+
+    add cf backup
+
+ backup-cf.json | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit df35c8d099f70f8c74beb47d7421d8520bcb08b6
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 17:54:16 2018 +0100
+
+    add concourse deployment
+
+ deploy-cf.json        | 53 ++++++++++++++++++++++++++-------------------------
+ deploy-concourse.json | 46 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 73 insertions(+), 26 deletions(-)
+
+commit fdc4ca0201c893703b4e4e158fd0d020270e290d
+Author: matr <maciej.trzebinski@grapeup.com>
+Date:   Fri Jan 26 16:19:16 2018 +0100
+
+    add cf deployment
+
+ deploy-cf.json | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+
+commit 124f8ca8a28af51c92886f37a33e2d81fcb1f1b6
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 11:32:19 2018 +0100
+
+    Added missing variable for deploy pipeline
+
+ deploy-bosh.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8ae8810c4965eb11e504ee77dc2ec5c06c64b57a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 11:12:49 2018 +0100
+
+    Added fixed infrastructure version
+
+ deploy-infrastructure.json | 5 ++---
+ destroy-env.json           | 4 ++--
+ 2 files changed, 4 insertions(+), 5 deletions(-)
+
+commit c1b5669008ddd6fe5c2effba341b6432e41ca015
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 10:49:14 2018 +0100
+
+    Added git_private_key variable mapping
+
+ deploy-bosh.json | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit fb4e4cc919a7cd07a3b1fe8da79bd68776611efe
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 09:48:51 2018 +0100
+
+    Changed inf-dev vpc cidr to 10.91.0.0/16
+
+ ...frastructure.json => deploy-infrastructure.json | 60 +++++++++++-----------
+ do_apocalypse.json => destroy-env.json             | 48 ++++++++---------
+ 2 files changed, 54 insertions(+), 54 deletions(-)
+
+commit 0dd5f8cb431383d2f1757cb13e9388dc0a3b26f2
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 09:44:27 2018 +0100
+
+    Added bosh pipelines
+
+ backup-bosh.json                                   | 31 ++++++++++
+ deploy-bosh.json                                   | 70 ++++++++++++++++++++++
+ ...frastructure.json => deploy-infrastructure.json |  0
+ do_apocalypse.json => destroy-env.json             |  0
+ restore-bosh.json                                  | 30 ++++++++++
+ 5 files changed, 131 insertions(+)
+
+commit ff1eef1fefcc764e10e47429dba53e918dc7107e
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 09:28:12 2018 +0100
+
+    Added infrastructure layer
+
+ create-infrastructure.json | 90 ++++++++++++++++++++++++++++++++++++++++++++++
+ do_apocalypse.json         | 86 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 176 insertions(+)
+
+commit da26c036d823fc67156900372ed488a2993fb48b
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Fri Jan 26 09:21:17 2018 +0100
+
+    Added gitignore
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 2377fec147f6a4f5d5e244ff6fa1073345cf477c
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Jan 25 13:31:00 2018 +0100
+
+    Renamed lock name
+
+ create-infrastructure.json | 2 +-
+ do_apocalypse.json         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e3ffd770e5c7212061d722f951a215e115a316b2
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Jan 24 14:01:21 2018 +0100
+
+    Added git_private_key variable (key that should be placed in jumpbox)
+
+ create-infrastructure.json | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+commit 80daefbc6ba3fe7a5e34122b3a662b400d3e48d2
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 17:11:30 2018 +0100
+
+    Fixed versions
+
+ backup-bosh.json       | 6 +++---
+ backup-cf.json         | 2 +-
+ backup-concourse.json  | 2 +-
+ deploy-bosh.json       | 2 +-
+ deploy-cf.json         | 2 +-
+ deploy-concourse.json  | 2 +-
+ restore-bosh.json      | 2 +-
+ restore-cf.json        | 2 +-
+ restore-concourse.json | 2 +-
+ 9 files changed, 11 insertions(+), 11 deletions(-)
+
+commit 50087fff8cd9f9f4723f82968f9e1e3b33d02fc8
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 16:58:12 2018 +0100
+
+    Fixed infrastructure_deployment repo version. Refactor
+
+ backup-bosh.json           | 14 ++++----
+ backup-cf.json             | 14 ++++----
+ backup-concourse.json      | 14 ++++----
+ create-infrastructure.json | 86 +++++++++++++++++++++++-----------------------
+ deploy-bosh.json           | 70 ++++++++++++++++++-------------------
+ deploy-cf.json             | 30 ++++++++--------
+ deploy-concourse.json      | 30 ++++++++--------
+ restore-bosh.json          | 12 +++----
+ restore-cf.json            | 12 +++----
+ restore-concourse.json     | 12 +++----
+ 10 files changed, 147 insertions(+), 147 deletions(-)
+
+commit b85e1b445ea82a1ede06854db59676c20acb4f46
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 16:48:36 2018 +0100
+
+    Changed structure
+
+ .gitignore                                                          | 1 +
+ production/backup-bosh.json => backup-bosh.json                     | 0
+ production/backup-cf.json => backup-cf.json                         | 0
+ production/backup-concourse.json => backup-concourse.json           | 0
+ production/create-infrastructure.json => create-infrastructure.json | 0
+ production/deploy-bosh.json => deploy-bosh.json                     | 0
+ production/deploy-cf.json => deploy-cf.json                         | 0
+ production/deploy-concourse.json => deploy-concourse.json           | 0
+ production/restore-bosh.json => restore-bosh.json                   | 0
+ production/restore-cf.json => restore-cf.json                       | 0
+ production/restore-concourse.json => restore-concourse.json         | 0
+ 11 files changed, 1 insertion(+)
+
+commit 9edd0aab73029226a946fa3e565a636f2804b4b0
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 16:39:54 2018 +0100
+
+    Removed vpc_name variable
+
+ create-infrastructure.json | 81 +++++++++++++++++++++++-----------------------
+ do_apocalypse.json         | 81 +++++++++++++++++++++++-----------------------
+ 2 files changed, 80 insertions(+), 82 deletions(-)
+
+commit b2454f8810a0025b45c3c33947b51030b59ecf6c
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 16:36:47 2018 +0100
+
+    Removed .idea
+
+ .gitignore                                     |   1 +
+ .idea/gu_environment_config.iml                |   9 --
+ .idea/inspectionProfiles/profiles_settings.xml |   5 --
+ .idea/modules.xml                              |   8 --
+ .idea/workspace.xml                            | 113 -------------------------
+ 5 files changed, 1 insertion(+), 135 deletions(-)
+
+commit 6819051cbdfd79b0172b6c70f5ffb2638f7270a5
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 13:52:32 2018 +0100
+
+    Added REAMDE.md
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit cdfe29b44c5d20775476dc0ada492977abde5bc8
+Merge: 9023197 859af4f
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 13:51:12 2018 +0100
+
+    Merge branch 'master' of github.com:grapeup/gu_environment_config
+
+commit 9023197312ebf488a1abc46921f570f2f55f2338
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 13:50:23 2018 +0100
+
+    Config moved to separate branch
+
+ inf-dev/create-infrastructure.json | 88 --------------------------------------
+ inf-dev/do_apocalypse.json         | 88 --------------------------------------
+ 2 files changed, 176 deletions(-)
+
+commit 30e29df515a91207b4858ca9dc61fcdeb305014a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Tue Jan 23 13:49:38 2018 +0100
+
+    New branch for inf-dev config
+
+ .idea/gu_environment_config.iml                    |   9 ++
+ .idea/inspectionProfiles/profiles_settings.xml     |   5 +
+ .idea/modules.xml                                  |   8 ++
+ .idea/workspace.xml                                | 113 +++++++++++++++++++++
+ ...frastructure.json => create-infrastructure.json |   0
+ inf-dev/do_apocalypse.json => do_apocalypse.json   |   0
+ 6 files changed, 135 insertions(+)
+
+commit 859af4ff249cd899b0ae4609bdc84cd5653ee9a4
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 18 16:02:03 2018 +0100
+
+    Update do_apocalypse.json
+
+ inf-dev/do_apocalypse.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f6634da39369ccf2d14ae2af444e15330a35958b
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 18 15:57:27 2018 +0100
+
+    Update create-infrastructure.json
+
+ inf-dev/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5125253437842a08cdb839c84a59d7074510cec9
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Jan 18 15:16:31 2018 +0100
+
+    Added apocalypse pipeline
+
+ inf-dev/do_apocalypse.json | 88 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 88 insertions(+)
+
+commit bdb2244a536edb53c7b5268ac1be9ea8552b1054
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:50:39 2018 +0100
+
+    Update deploy-concourse.json
+
+ production/deploy-concourse.json | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 649c7b3f3a8afcf2d027da135724e3e95c05f909
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Jan 18 14:49:43 2018 +0100
+
+    Renamed inf-dev env name
+
+ {infrastructure-development-1 => inf-dev}/create-infrastructure.json | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 16a1336711b0775baae9a0a2d74eb494df1fe7fa
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:48:25 2018 +0100
+
+    Update deploy-concourse.json
+
+ production/deploy-concourse.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e26db440de59ab30fa346e32889ec5dcb48df7b1
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:48:11 2018 +0100
+
+    Update deploy-cf.json
+
+ production/deploy-cf.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9e865ecdff2ea0c70857b20241537f9ed336c5a0
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Thu Jan 18 14:40:04 2018 +0100
+
+    Removed unneeded envs
+
+ bosh-development-1/create-infrastructure.json      | 83 --------------------
+ bosh-development-1/deploy-bosh.json                | 87 ---------------------
+ .../create-infrastructure.json                     | 83 --------------------
+ deployment-development-1/deploy-bosh.json          | 87 ---------------------
+ deployment-development-1/deploy-cf.json            | 90 ----------------------
+ deployment-development-1/deploy-concourse.json     | 90 ----------------------
+ 6 files changed, 520 deletions(-)
+
+commit d3e66ab240ff95dda6f82f032824bcceb0b73adf
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:29:05 2018 +0100
+
+    move to 1.0.0
+
+ production/backup-bosh.json           | 2 +-
+ production/backup-cf.json             | 2 +-
+ production/backup-concourse.json      | 2 +-
+ production/create-infrastructure.json | 2 +-
+ production/deploy-bosh.json           | 2 +-
+ production/deploy-cf.json             | 2 +-
+ production/deploy-concourse.json      | 2 +-
+ production/restore-bosh.json          | 2 +-
+ production/restore-cf.json            | 2 +-
+ production/restore-concourse.json     | 2 +-
+ 10 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 2d1aa37fc8d29d0aaafd6aae500dc70c12f640e0
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:27:37 2018 +0100
+
+    move prod
+
+ production/backup-bosh.json           | 28 -----------
+ production/backup-cf.json             | 32 -------------
+ production/backup-concourse.json      | 32 -------------
+ production/create-infrastructure.json | 89 -----------------------------------
+ production/deploy-bosh.json           | 70 ---------------------------
+ production/deploy-cf.json             | 47 ------------------
+ production/deploy-concourse.json      | 40 ----------------
+ production/restore-bosh.json          | 26 ----------
+ production/restore-cf.json            | 30 ------------
+ production/restore-concourse.json     | 30 ------------
+ 10 files changed, 424 deletions(-)
+
+commit 8817e19fe6a4c069c3303be2025bd5e771de6921
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 14:27:13 2018 +0100
+
+    init prod
+
+ bosh-development-1/create-infrastructure.json      | 83 --------------------
+ bosh-development-1/deploy-bosh.json                | 87 ---------------------
+ .../create-infrastructure.json                     | 83 --------------------
+ deployment-development-1/deploy-bosh.json          | 87 ---------------------
+ deployment-development-1/deploy-cf.json            | 90 ----------------------
+ deployment-development-1/deploy-concourse.json     | 90 ----------------------
+ .../create-infrastructure.json                     | 88 ---------------------
+ 7 files changed, 608 deletions(-)
+
+commit 58d08470715d41863479496d22d2e025832991b5
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:46:04 2018 +0100
+
+    add aws vars
+
+ production/backup-concourse.json  | 4 ++++
+ production/restore-concourse.json | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+commit bf71fb4857b373989ce9f9cca5726bdf4bd46af3
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:43:19 2018 +0100
+
+    add backup restore pipelines
+
+ production/backup-concourse.json  | 28 ++++++++++++++++++++++++++++
+ production/restore-concourse.json | 26 ++++++++++++++++++++++++++
+ 2 files changed, 54 insertions(+)
+
+commit 9be6420ee6c30cd13443138908ce5c45af44952b
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:33:47 2018 +0100
+
+    refactor vars
+
+ production/backup-cf.json  | 8 ++++----
+ production/restore-cf.json | 8 ++++----
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+commit bc30a94a953f6306905f1200eafc27700ade372c
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:29:11 2018 +0100
+
+    fix git key
+
+ production/backup-cf.json  | 2 +-
+ production/restore-cf.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit f536a904f0115c3f00e7aa06dc991c45accc5be7
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:26:56 2018 +0100
+
+    add cf pipelines
+
+ production/backup-bosh.json |  2 +-
+ production/backup-cf.json   | 32 ++++++++++++++++++++++++++++++++
+ production/restore-cf.json  | 30 ++++++++++++++++++++++++++++++
+ 3 files changed, 63 insertions(+), 1 deletion(-)
+
+commit f8590650b7c4a3c0c1cb896254fa23e92f704562
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:11:03 2018 +0100
+
+    add restore pipeline
+
+ production/backup-bosh.json  |  2 ++
+ production/restore-bosh.json | 26 ++++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
+
+commit c310449696aca415764194bc1d70cdd79f3a8686
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:06:18 2018 +0100
+
+    add backup timer
+
+ production/backup-bosh.json | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit b4b6dff0724a0d903e5a8fa22cbf2d55580d5260
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 11:01:32 2018 +0100
+
+    add vars for backup
+
+ production/backup-bosh.json | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+commit 78f6ec584cdb14ee1a65ad229e64670258a1dd19
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 10:56:30 2018 +0100
+
+    add vars
+
+ production/backup-bosh.json | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit abf8ddbc5473e32912044e7a3bc4939ba8c9fef0
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 10:50:35 2018 +0100
+
+    add backup bosh pipeline
+
+ production/backup-bosh.json | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 1823a5e9b9bc863361ee4d14e2d8fba3a8d0e111
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 10:08:08 2018 +0100
+
+    add locks to cf and concourse
+
+ production/deploy-cf.json        | 9 +++++----
+ production/deploy-concourse.json | 9 +++++----
+ 2 files changed, 10 insertions(+), 8 deletions(-)
+
+commit add624805218dffba4a64371d7a097a5b7cf4e86
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 09:42:25 2018 +0100
+
+    add locks to bosh
+
+ production/create-infrastructure.json | 5 +----
+ production/deploy-bosh.json           | 9 +++++----
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+commit 539dcec34206d705d64b88afeaf2228af157b627
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 08:47:15 2018 +0100
+
+    remove hyphen
+
+ production/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a0c2725bff9cbe86de5c1e74c80bc1ad3d7dc9cb
+Merge: 2c67207 9181d75
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 08:43:26 2018 +0100
+
+    Merge branch 'master' of github.com:grapeup/gu_environment_config
+
+commit 2c6720757943a146eb2de74650f7bc904532bf73
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Thu Jan 18 08:43:15 2018 +0100
+
+    add locker vars
+
+ production/create-infrastructure.json | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit 9181d7523ab4c7635103ac0d9389469fac6b8776
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Jan 17 16:48:15 2018 +0100
+
+    Fix
+
+ infrastructure-development-1/create-infrastructure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e8317362b7932531a4ffa6a0e88041f581670040
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Jan 17 16:28:07 2018 +0100
+
+    Added locker vars
+
+ infrastructure-development-1/create-infrastructure.json | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 64fe480f434b508027cc10555eacdd7ad8cc461d
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Jan 17 14:39:45 2018 +0100
+
+    Update create-infrastructure.json
+
+ infrastructure-development-1/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d0f86083b2f05537bdeb7dc71f530d2b10be0bea
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Jan 17 14:38:38 2018 +0100
+
+    Update create-infrastructure.json
+
+ infrastructure-development-1/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 0fa0afb5d97f92a2db900d251232efb8e373f426
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Wed Jan 17 14:36:51 2018 +0100
+
+    Added required vars to inf-dev env
+
+ infrastructure-development-1/create-infrastructure.json | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+commit 1766f8fc62c5670f6d28ba2bef50892f56754d21
+Author: Paweł Konopko <pako-grape@users.noreply.github.com>
+Date:   Wed Jan 17 14:11:09 2018 +0100
+
+    Update create-infrastructure.json
+
+ infrastructure-development-1/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2bfa846a01edae5c89a9b1fd8be38049ade094ad
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 13:41:18 2018 +0100
+
+    add concourse vars
+
+ production/deploy-concourse.json | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+commit bd4067a5a6c1c4433bdb033f8caa33dddc11cc63
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 13:22:45 2018 +0100
+
+    add bbr vars
+
+ production/deploy-cf.json        | 3 +++
+ production/deploy-concourse.json | 3 +++
+ 2 files changed, 6 insertions(+)
+
+commit 0264682f3b8ad42a9ab21e674b31256cf67b8366
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 13:18:42 2018 +0100
+
+    fix json
+
+ production/deploy-cf.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit bd71e10b475a8151a6be3f3aaa25c976e94227ef
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 13:17:22 2018 +0100
+
+    add cf vars
+
+ production/deploy-cf.json | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+commit 023f7d998dbf2e042b359ab5733735306c6af2a5
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 12:26:20 2018 +0100
+
+    add vars
+
+ production/deploy-bosh.json | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+commit 4d2dd28cb0076390071d24fcbdf0793595058b6a
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 12:05:54 2018 +0100
+
+    fix paths
+
+ production/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e857e0db6dd89cddb039a1cfb0171d7307ec2ae9
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 12:01:26 2018 +0100
+
+    add locks
+
+ production/create-infrastructure.json | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit db7836185a57d913f89fd8925f23d7baea5fede3
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 11:57:16 2018 +0100
+
+    add repo version
+
+ production/create-infrastructure.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 430c08da81b6d1cc5a090a7c9ec9b8058b199f56
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 11:44:45 2018 +0100
+
+    false trigger
+
+ production/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b952e8cfda52e7eaf64c72bb7ebafa994c9cc7c0
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 11:33:46 2018 +0100
+
+    add trigger
+
+ production/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fc7ae6ae9b2f6c987d822c48a9af8cfb0693ee1b
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 11:27:24 2018 +0100
+
+    cleanup vars
+
+ production/create-infrastructure.json |  3 +-
+ production/deploy-bosh.json           | 31 ++---------------
+ production/deploy-cf.json             | 59 +++-----------------------------
+ production/deploy-concourse.json      | 64 ++---------------------------------
+ 4 files changed, 11 insertions(+), 146 deletions(-)
+
+commit 2e879cd514823259bb5154e240db0e7b670573a0
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 11:07:21 2018 +0100
+
+    set tags
+
+ production/deploy-bosh.json      | 2 +-
+ production/deploy-cf.json        | 2 +-
+ production/deploy-concourse.json | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 6d3aa7befe3df777ee16f61a364f27393f3ad9e9
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 10:59:59 2018 +0100
+
+    create prod
+
+ production/create-infrastructure.json | 82 +++++++++++++++++++++++++++++++++
+ production/deploy-bosh.json           | 87 +++++++++++++++++++++++++++++++++++
+ production/deploy-cf.json             | 87 +++++++++++++++++++++++++++++++++++
+ production/deploy-concourse.json      | 87 +++++++++++++++++++++++++++++++++++
+ 4 files changed, 343 insertions(+)
+
+commit e8898d0d7d5a4b2324b8d2430cfd9c5a91c45dce
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 09:19:19 2018 +0100
+
+    fix paths
+
+ deployment-development-1/deploy-cf.json        | 8 ++++----
+ deployment-development-1/deploy-concourse.json | 8 ++++----
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+commit 53560cc0f9c01d8c5ef3b232b049a0f7d7619eb8
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 09:16:17 2018 +0100
+
+    add backups
+
+ deployment-development-1/deploy-cf.json        | 7 ++++++-
+ deployment-development-1/deploy-concourse.json | 7 ++++++-
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+commit 9beb482d303d554038bf07a6a728e914a86e3864
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 09:10:06 2018 +0100
+
+    add bosh bucket vars
+
+ deployment-development-1/deploy-cf.json        | 3 +++
+ deployment-development-1/deploy-concourse.json | 3 +++
+ 2 files changed, 6 insertions(+)
+
+commit 68b6faadcb19a3380732f80ce233c71a09e8e56d
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 09:02:05 2018 +0100
+
+    add backup bosh vars
+
+ bosh-development-1/deploy-bosh.json       | 7 ++++++-
+ deployment-development-1/deploy-bosh.json | 7 ++++++-
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+commit 84f2fba344847a26c7eac0bdd0341d01452a6573
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:43:48 2018 +0100
+
+    reverte
+
+ bosh-development-1/create-infrastructure.json       | 2 +-
+ deployment-development-1/create-infrastructure.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 5712a385f3cd31e53f3056710cc0c1719459855d
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:41:20 2018 +0100
+
+    change to deploy pipeline
+
+ bosh-development-1/create-infrastructure.json       | 2 +-
+ deployment-development-1/create-infrastructure.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit d1f92382691ec3522ccc90d978d543de1c7f2606
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:34:39 2018 +0100
+
+    add cf and concourse
+
+ bosh-development-1/deploy-bosh.json                |  1 -
+ .../create-infrastructure.json                     | 50 ++++++-------
+ deployment-development-1/deploy-bosh.json          | 69 +++++++++---------
+ deployment-development-1/deploy-cf.json            | 82 ++++++++++++++++++++++
+ deployment-development-1/deploy-concourse.json     | 82 ++++++++++++++++++++++
+ 5 files changed, 223 insertions(+), 61 deletions(-)
+
+commit 39e7f5ccb0e052270571997c8f358210c89a1279
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:30:19 2018 +0100
+
+    fix bosh
+
+ bosh-development-1/deploy-bosh.json                |  2 +-
+ .../create-infrastructure.json                     | 83 ++++++++++++++++++++++
+ deployment-development-1/deploy-bosh.json          | 83 ++++++++++++++++++++++
+ 3 files changed, 167 insertions(+), 1 deletion(-)
+
+commit 8f105c6a939072d86e5bf14ce93abed27bbf5eaa
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:25:33 2018 +0100
+
+    delete bosh
+
+ infrastructure-development-1/deploy-bosh.json | 250 --------------------------
+ 1 file changed, 250 deletions(-)
+
+commit 558aefa6c23ddf380bfd0ee2ec0f24cbcf217c38
+Author: Jakub Grzeska <k.grzeska@gmail.com>
+Date:   Wed Jan 17 08:22:47 2018 +0100
+
+    bosh and inf
+
+ bosh-development-1/create-infrastructure.json      |  83 ++++++++++
+ bosh-development-1/deploy-bosh.json                |  83 ++++++++++
+ cf-test-1/create-infrastructure.json               | 171 ---------------------
+ .../create-infrastructure.json                     |  82 ++++++++++
+ .../deploy-bosh.json                               |   0
+ 5 files changed, 248 insertions(+), 171 deletions(-)
+
+commit e93e498299c0292cba317c8a06c0c4908df3b4b9
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:56:50 2018 +0100
+
+    Update deploy-bosh.json
+
+ cf-test-1/deploy-bosh.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3e888f7da760564d4dcf9d507f5c49cb05e96908
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:55:18 2018 +0100
+
+    Create deploy-bosh.json
+
+ cf-test-1/deploy-bosh.json | 250 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 250 insertions(+)
+
+commit 1a8f897801a97ba769b31bb555f67721f8608c7b
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:51:14 2018 +0100
+
+    Delete create_env.json
+
+ cf-test-1/create_env.json | 22 ----------------------
+ 1 file changed, 22 deletions(-)
+
+commit 0ab4ce361456bf4aac7755d4a62a4a7478a8267a
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:48:52 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 0f8ef75ee09f5f8100e4c3670ab66a80c36c758e
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:46:20 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ac03dc08afb8971d33f134a745dae67df82f7f4d
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:45:38 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 7e580e3ce9f5af70414236f15836b4f8c7f96efc
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:43:32 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+
+commit fcb4017692845e079e13545054885fbbc0faf368
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 17:39:17 2018 +0100
+
+    Delete config.json
+
+ config.json | 33 ---------------------------------
+ 1 file changed, 33 deletions(-)
+
+commit e51682e77a1818acaf471a85a6fa7058ff6d5652
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:54:53 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 6648c1ae77c93ecb0a893991685c57d72f57752c
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:53:48 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ec268c425ddd2ea46df99db6670e6f711cc5a42e
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:52:36 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 6e903210d085e9b72eac5f9845148ff52cb2881b
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:51:18 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 05c8447dbf4d48c8da5cb8ebbdf04d7ad4029500
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:50:13 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 554f5302ba3a40ad1e96c72ea4414fadea16afa4
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:48:25 2018 +0100
+
+    Update create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 148 ++++++++++++++++++++++++++++++++---
+ 1 file changed, 136 insertions(+), 12 deletions(-)
+
+commit 7139c5bc02038afdb79a65c99b2171b492014f94
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:46:36 2018 +0100
+
+    Create create-infrastructure.json
+
+ cf-test-1/create-infrastructure.json | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit 256ad19667ba8f997ac169494b57b7385bce3553
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:16:05 2018 +0100
+
+    Update create_env.json
+
+ cf-test-1/create_env.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit dacdb45cb1c0f7e06a2aa67b1da24aa5f35c62ca
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 16:10:09 2018 +0100
+
+    validate json
+
+ cf-test-1/create_env.json | 112 +---------------------------------------------
+ 1 file changed, 2 insertions(+), 110 deletions(-)
+
+commit 6e12d1fa8e1ca97a46107919071d8823b3eeb7fe
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 11:07:25 2018 +0100
+
+    Update config.json
+
+ config.json | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+commit 451561e9de8cdec2c1e97f5fd83c92fdfa79c63d
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Tue Jan 16 11:02:10 2018 +0100
+
+    Update config.json
+
+ config.json | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 61958c46e245c4525a1e2fab8bcd43de0cc66e25
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Mon Jan 15 16:49:39 2018 +0100
+
+    Fixed fortress vars names
+
+ cf-test-1/create_env.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit cb271c1c888874c2a7660d0c5ea8e9370179be9a
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Mon Jan 15 16:09:29 2018 +0100
+
+    Fixed pipeline path
+
+ cf-test-1/create_env.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8355de884e3fc3ccb304419e015d6283911a1ba3
+Author: pako-grape <pawel.konopko@grapeup.com>
+Date:   Mon Jan 15 16:07:46 2018 +0100
+
+    Added new env description
+
+ cf-test-1/create_env.json | 130 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 130 insertions(+)
+
+commit bf727d7e4c5674ee1f2ccc0c8ca39a4bb63e95e6
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 11 14:58:51 2018 +0100
+
+    Delete README.md
+
+ README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 63faf6ecfb81f4d6e2d11b3c0c69ac3cebd29296
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 11 14:58:43 2018 +0100
+
+    Create config.json
+
+ config.json | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit b111998d299bd402ac1856f6a155302bcfa77917
+Author: Jakub Grześka <k.grzeska@gmail.com>
+Date:   Thu Jan 11 14:03:57 2018 +0100
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
