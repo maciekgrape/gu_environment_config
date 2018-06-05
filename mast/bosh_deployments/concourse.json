@@ -1,0 +1,35 @@
+{
+    "repo_url": "git@github.com:grapeup/gu_concourse_deployment.git",
+    "repo_version": "master",
+    "repo_private_key_var_name": "git_private_key",
+
+    "pipelines": [
+        {
+            "name": "deploy_concourse",
+            "file": "ci/pipelines/aws/deploy_pipeline.yml",
+            "vars": [
+                {"name": "trigger_on_repo_change", "value": "false"},
+                {"name": "concourse_bbr_release_filename", "value": "concourse-bbr/concourse-bbr-1.0.1.tgz"}
+            ]
+        },
+        {
+            "name": "backup_concourse",
+            "file": "ci/pipelines/aws/backup_pipeline.yml",
+            "vars": [
+                {"name": "backup_interval", "value": "48h"}
+            ]
+        },
+        {
+            "name": "restore_concourse",
+            "file": "ci/pipelines/aws/restore_pipeline.yml",
+            "vars": []
+        }
+    ],
+
+    "vars": [
+        {"name": "backups_bucket_name", "value": "ms-backup-lab"},
+        {"name": "backups_s3_region", "value": "eu-central-1"},
+        {"name": "backups_s3_access_key", "fortress_var": "aws_access_key"},
+        {"name": "backups_s3_secret_key", "fortress_var": "aws_secret_key"}
+    ]
+}
