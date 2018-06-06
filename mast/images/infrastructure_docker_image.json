@@ -1,0 +1,20 @@
+{
+  "repo_url": "git@github.com:grapeup/gu_docker_images.git",
+  "repo_version": "master",
+  "repo_private_key_var_name": "git_private_key",
+
+  "pipelines": [
+    {
+      "name": "create_infrastructure_docker_image",
+      "file": "ci/pipelines/build_and_upload.yml",
+      "vars": [
+        {"name": "trigger_on_repo_change", "value": "false"},
+        {"name": "docker_username", "fortress_var": "nexus_username"},
+        {"name": "docker_password","fortress_var": "nexus_password"},
+        {"name": "docker_url","fortress_var": "nexus_url"},
+        {"name": "docker_image_name","value": "infrastructure"}
+      ]
+    }
+  ]
+}
+
